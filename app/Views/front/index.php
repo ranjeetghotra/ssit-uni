@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
     <title>Universo - Educational, Course and University Template</title>
+    <style>
+        .breadcrumb {
+            margin-bottom: 2rem;
+        }
+    </style>
 
 </head>
 

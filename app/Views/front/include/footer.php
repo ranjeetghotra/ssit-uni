@@ -37,15 +37,15 @@
                             <h4>Contact Us</h4>
                         </header>
                         <address>
-                            <strong>University of Universo</strong>
+                            <strong>Sri Sai Institute of Technology</strong>
                             <br>
-                            <span>4877 Spruce Drive</span>
+                            <span>Mahua Dabra, Jaspur, Udham Singh Nagar,</span>
                             <br><br>
-                            <span>West Newton, PA 15089</span>
+                            <span>Uttarakhand (India)</span>
                             <br>
-                            <abbr title="Telephone">Telephone:</abbr> +1 (734) 123-4567
+                            <abbr title="Telephone">Telephone:</abbr> 05947-222088
                             <br>
-                            <abbr title="Email">Email:</abbr> <a href="#">questions@youruniversity.com</a>
+                            <abbr title="Email">Email:</abbr> <a href="#">info@srisaiiot.com</a>
                         </address>
                     </aside>
                 </div><!-- /.col-md-3 -->

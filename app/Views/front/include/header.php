@@ -1,19 +1,19 @@
 <div class="navigation-wrapper">
     <div class="secondary-navigation-wrapper">
         <div class="container">
-            <div class="navigation-contact pull-left">Call Us: <span class="opacity-70">000-123-456-789</span></div>
-            <div class="search">
+            <div class="navigation-contact pull-left">Call Us: <span class="opacity-70">05947-222088</span></div>
+            <!--<div class="search">
                 <div class="input-group">
                     <input type="search" class="form-control" name="search" placeholder="Search">
                     <span class="input-group-btn"><button type="submit" id="search-submit" class="btn"><i class="fa fa-search"></i></button></span>
-                </div><!-- /.input-group -->
+                </div>
             </div>
             <ul class="secondary-navigation list-unstyled">
                 <li><a href="#">Prospective Students</a></li>
                 <li><a href="#">Current Students</a></li>
                 <li><a href="#">Faculty & Staff</a></li>
                 <li><a href="#">Alumni</a></li>
-            </ul>
+            </ul>-->
         </div>
     </div><!-- /.secondary-navigation -->
     <div class="primary-navigation-wrapper">
@@ -33,14 +33,9 @@
                 <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="#" class="has-child no-link">Home</a>
-                            <ul class="list-unstyled child-navigation">
-                                <li><a href="index.html">Homepage Education</a></li>
-                                <li><a href="homepage-courses.html">Homepage Courses</a></li>
-                                <li><a href="homepage-events.html">Homepage Events</a></li>
-                            </ul>
+                            <a href="/">Home</a>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="#" class=" has-child no-link">Courses</a>
                             <ul class="list-unstyled child-navigation">
                                 <li><a href="course-landing-page.html">Course Landing Page</a></li>
@@ -60,30 +55,18 @@
                                 <li><a href="event-detail.html">Event Detail</a></li>
                                 <li><a href="event-calendar.html">Events Calendar</a></li>
                             </ul>
-                        </li>
+                        </li>-->
                         <li>
-                            <a href="/about-us">About Us</a>
-                        </li>
-                        <li>
-                            <a href="#" class="has-child no-link">Blog</a>
+                            <a class="has-child no-link">About Us</a>
                             <ul class="list-unstyled child-navigation">
-                                <li><a href="blog-listing.html">Blog listing</a></li>
-                                <li><a href="blog-detail.html">Blog Detail</a></li>
+                                <li><a href="/about-us">About SSIT</a></li>
+                                <li><a href="/vision-mission">Vision & Mission</a></li>
+                                <li><a href="/chairman-message">Chairman's Message</a></li>
+                                <li><a href="/principal-message">Principal's Message</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="has-child no-link">Pages</a>
-                            <ul class="list-unstyled child-navigation">
-                                <li><a href="full-width.html">Fullwidth</a></li>
-                                <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                                <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                                <li><a href="microsite.html">Microsite</a></li>
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="members.html">Members</a></li>
-                                <li><a href="member-detail.html">Member Detail</a></li>
-                                <li><a href="register-sign-in.html">Register & Sign In</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
-                            </ul>
+                            <a href="/gallery">Gallery</a>
                         </li>
                         <li>
                             <a href="/contact-us">Contact Us</a>

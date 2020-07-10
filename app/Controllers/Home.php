@@ -9,7 +9,7 @@ class Home extends BaseController
 	}
 	public function page($page)
 	{
-		$page_data['page'] = $page;
+		$page_data['page'] = 'pages/'.$page;
 		return view('front/index', $page_data);
 	}
 
