@@ -1,4 +1,5 @@
 <footer id="page-footer">
+    <?php /* ?>
     <section id="footer-top">
         <div class="container">
             <div class="footer-inner">
@@ -21,7 +22,7 @@
                 </div><!-- /.pull-right -->
             </div><!-- /.footer-inner -->
         </div><!-- /.container -->
-    </section><!-- /#footer-top -->
+    </section><!-- /#footer-top --><?php */ ?>
 
     <section id="footer-content">
         <div class="container">

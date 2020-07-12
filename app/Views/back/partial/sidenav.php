@@ -30,9 +30,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= $page == "page" ? "active" : "" ?>" href="/manage/page">
+                        <a class="nav-link <?= $page == "news" ? "active" : "" ?>" href="/manage/news">
                             <i class="ni ni-single-copy-04 text-info"></i>
-                            <span class="nav-link-text">Pages</span>
+                            <span class="nav-link-text">News</span>
                         </a>
                     </li>
                     <li class="nav-item <?= $page == "slider" ? "active" : "" ?>">

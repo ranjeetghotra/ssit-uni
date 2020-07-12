@@ -67,5 +67,13 @@
             });
         }
     }
-        loadImages();
+
+    function deleteImage(id) {
+        if (confirm("Are you sure to delete?")) {
+            $.get('/manage/gallery/delete/' + id, function() {
+                loadImages();
+            });
+        }
+    }
+    loadImages();
 </script>

@@ -29,7 +29,7 @@ $images = $db->table('gallery')->orderBy('gallery_id', 'desc')->get()->getResult
                         </header>
                         <ul class="gallery-list">
                             <?php foreach ($images as $image) : ?>
-                                <li style=""><a href="/images/gallery/full/<?= $image['gallery_name'] ?>" class="image-popup"><img src="/images/gallery/full/<?= $image['gallery_name'] ?>" alt=""></a></li>
+                                <li style=""><a href="/images/gallery/full/<?= $image['gallery_name'] ?>" class="image-popup"><img src="/images/gallery/thumb/<?= $image['gallery_name'] ?>" alt=""></a></li>
                             <?php endforeach ?>
                         </ul>
                     </section>

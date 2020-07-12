@@ -4,16 +4,16 @@
         <div class="header-body">
             <div class="row align-items-center py-4">
                 <div class="col-lg-6 col-7">
-                    <h6 class="h2 text-white d-inline-block mb-0">Press Release</h6>
+                    <h6 class="h2 text-white d-inline-block mb-0">Slider</h6>
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                             <li class="breadcrumb-item"><a href="/manage"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Press Release</li>
+                            <li class="breadcrumb-item active" aria-current="page">slider</li>
                         </ol>
                     </nav>
                 </div>
                 <div class="col-lg-6 col-5 text-right">
-                    <form action="/manage/press/upload" id="formGallery">
+                    <form action="/manage/slider/upload" id="formGallery">
                         <a class="btn btn-sm btn-neutral" style="overflow: hidden;"><input type="file" onchange="uploadImages(this)" name="images[]" multiple style="position: absolute; opacity: 0;">Upload</a>
                     </form>
                 </div>
@@ -28,12 +28,9 @@
             <div class="card">
                 <!-- Card header -->
                 <div class="card-header">
-                    <h3 class="mb-0">Press Release</h3>
+                    <h3 class="mb-0">Images</h3>
                 </div>
                 <div class="container text-center py-3" id="gallery-data"></div>
-                <!-- Card footer -->
-                <div class="card-footer py-4">
-                </div>
             </div>
         </div>
     </div>
@@ -42,7 +39,7 @@
 </div>
 <script>
     function loadImages() {
-        $('#gallery-data').load('/manage/press/images');
+        $('#gallery-data').load('/manage/slider/images');
     }
 
     function uploadImages(input) {
@@ -70,7 +67,7 @@
 
     function deleteImage(id) {
         if (confirm("Are you sure to delete?")) {
-            $.get('/manage/press/delete/' + id, function() {
+            $.get('/manage/slider/delete/' + id, function() {
                 loadImages();
             });
         }

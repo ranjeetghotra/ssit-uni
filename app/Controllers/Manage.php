@@ -44,7 +44,7 @@ class Manage extends BaseController
 		$this->session->remove($array_items);
 		return redirect()->to('auth/admin');
 	}
-	public function gallery($para1 = '')
+	public function gallery($para1 = '', $para2 = '')
 	{
 		if ($para1 == 'upload') {
 			$imageLib = \Config\Services::image();
@@ -64,12 +64,20 @@ class Manage extends BaseController
 			$page_data['images'] = $this->db->table('gallery')->orderBy('gallery_id', 'desc')->get()->getResult('array');
 			return view('back/gallery_images', $page_data);
 		}
+		elseif ($para1 == 'delete') {
+			$image = $this->db->table('gallery')->getWhere(['gallery_id' => $para2])->getRow()->gallery_name;
+			$this->db->table('gallery')->where(['gallery_id' => $para2])->delete();
+			if ($image) {
+				unlink('images/gallery/full/' . $image);
+				unlink('images/gallery/thumb/' . $image);
+			}
+		}
 		else {
 			$page_data['page'] = 'gallery';
 			return view('back/index', $page_data);
 		}
 	}
-	public function press($para1 = '')
+	public function press($para1 = '', $para2 = '')
 	{
 		if ($para1 == 'upload') {
 			$imageLib = \Config\Services::image();
@@ -88,6 +96,14 @@ class Manage extends BaseController
 		} elseif ($para1 == 'images') {
 			$page_data['images'] = $this->db->table('press')->orderBy('press_id', 'desc')->get()->getResult('array');
 			return view('back/press_images', $page_data);
+		}
+		elseif ($para1 == 'delete') {
+			$image = $this->db->table('press')->getWhere(['press_id' => $para2])->getRow()->press_name;
+			$this->db->table('press')->where(['press_id' => $para2])->delete();
+			if ($image) {
+				unlink('images/press/full/' . $image);
+				unlink('images/press/thumb/' . $image);
+			}
 		}
 		else {
 			$page_data['page'] = 'press';
@@ -156,12 +172,9 @@ class Manage extends BaseController
 	}
 	public function contact($para1 = '', $para2 = '')
 	{
-		if ($para1 == "message") {
-			return $this->db->table('contact')->getWhere(['contact_id' => $para2])->getRow()->contact_message;
-		} elseif ($para1 == "delete") {
+		if ($para1 == "delete") {
 			$this->db->table('contact')->where(['contact_id' => $para2])->delete();
-		}
-		elseif ($para1 == "list_data") {
+		} elseif ($para1 == "list_data") {
 			// $contact = $this->db->table('contact')->orderBy('contact_id', 'desc')->get()->getResult('array');
 			$limit = $this->request->getPost('length');
 			$start = $this->request->getPost('start');
@@ -202,6 +215,39 @@ class Manage extends BaseController
 		else {
 			$page['page'] = 'contact';
 			return view('back/index', $page);
+		}
+	}
+	public function slider($para1 = '', $para2 = '')
+	{
+		if ($para1 == 'upload') {
+			$imageLib = \Config\Services::image();
+			if ($imagefile = $this->request->getFiles()) {
+				foreach ($imagefile['images'] as $img) {
+					if ($img->isValid() && !$img->hasMoved()) {
+						$newName = $img->getRandomName();
+						if ($img->move('images/slider/full', $newName)) {
+							$imageLib->withFile('images/slider/full/' . $newName)->resize(200, 200, true, 'height')->save('images/slider/thumb/' . $newName, 50);
+							$imageLib->withFile('images/slider/full/' . $newName)->flip('horizontal')->flip('horizontal')->save('images/slider/full/' . $newName, 50);
+							$this->db->table('slider')->insert(['slider_name' => $newName]);
+						}
+					}
+				}
+			}
+		} elseif ($para1 == 'images') {
+			$page_data['images'] = $this->db->table('slider')->orderBy('slider_id', 'desc')->get()->getResult('array');
+			return view('back/slider_images', $page_data);
+		}
+		elseif ($para1 == 'delete') {
+			$image = $this->db->table('slider')->getWhere(['slider_id' => $para2])->getRow()->slider_name;
+			$this->db->table('slider')->where(['slider_id' => $para2])->delete();
+			if ($image) {
+				unlink('images/slider/full/' . $image);
+				unlink('images/slider/thumb/' . $image);
+			}
+		}
+		else {
+			$page_data['page'] = 'slider';
+			return view('back/index', $page_data);
 		}
 	}
 

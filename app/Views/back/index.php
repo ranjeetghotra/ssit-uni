@@ -35,6 +35,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.21/datatables.min.css" />
   <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+  <style>
+    .btn-del-absolute {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+    }
+  </style>
 </head>
 
 <body>
