@@ -1,6 +1,4 @@
-<?php $db = db_connect();
-$images = $db->table('slider')->orderBy('slider_id', 'desc')->get()->getResult('array');
-$gallery = $db->table('gallery')->orderBy('gallery_id', 'desc')->limit(14)->get()->getResult('array'); ?><div id="page-content">
+<div id="page-content">
     <!-- Slider -->
     <div id="homepage-carousel">
         <div class="container">
@@ -80,18 +78,12 @@ $gallery = $db->table('gallery')->orderBy('gallery_id', 'desc')->limit(14)->get(
                             <h2>News</h2>
                         </header>
                         <div class="section-content">
-                            <article>
-                                <figure class="date"><i class="fa fa-file-o"></i>08-24-2014</figure>
-                                <header><a href="#">U-M School of Public Health, Detroit partners aim to improve air quality in the city</a></header>
-                            </article><!-- /article -->
-                            <article>
-                                <figure class="date"><i class="fa fa-file-o"></i>08-24-2014</figure>
-                                <header><a href="#">At 50, Center for the Education of Women celebrates a wider mission</a></header>
-                            </article><!-- /article -->
-                            <article>
-                                <figure class="date"><i class="fa fa-file-o"></i>08-24-2014</figure>
-                                <header><a href="#">Three U-Michigan scientists receive Sloan fellowships</a></header>
-                            </article><!-- /article -->
+                            <?php foreach ($news as $n) : ?>
+                                <article>
+                                    <figure class="date"><i class="fa fa-file-o"></i><?= date('j-M-Y', strtotime($n['news_created_at'])) ?></figure>
+                                    <header><a><?= $n['news_title'] ?></a></header>
+                                </article><!-- /article -->
+                            <?php endforeach ?>
                         </div><!-- /.section-content -->
                         <a href="" class="read-more stick-to-bottom">All News</a>
                     </section><!-- /.news-small -->
@@ -148,11 +140,10 @@ $gallery = $db->table('gallery')->orderBy('gallery_id', 'desc')->limit(14)->get(
                             <h2>About Universo</h2>
                         </header>
                         <div class="section-content">
-                            <img src="assets/img/students.jpg" alt="" class="add-margin">
-                            <p><strong>Welcome o Universo.</strong> Premium HTML Template for schools, universieties and other educational institutes.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet semper tincidunt.
-                                Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
-                            <a href="" class="read-more stick-to-bottom">Read More</a>
+                            <img src="/assets/img/campus/college.png" alt="" class="add-margin img-responsive">
+                            <p>The <strong>Sri Sai Institute of Technology</strong> is setup to impart quality education in the field of Diploma in Engineering (ME, ME[Automobile], Civil, Electrical) and to groom young people with knowledge and skills that would help them make meaningful contribution to commerce and society.
+                                SSIT is the congregation of knowledge and vision that provides a unique opportunity to its students to gain insights into tomorrow’s technology.</p>
+                            <a href="/about-us" class="read-more stick-to-bottom">Read More</a>
                         </div><!-- /.section-content -->
                     </section><!-- /.about -->
                 </div><!-- /.col-md-4 -->
@@ -261,7 +252,7 @@ $gallery = $db->table('gallery')->orderBy('gallery_id', 'desc')->limit(14)->get(
     </div>
     <!-- end Academic Life, Campus Life, Newsletter -->
 
-    <!-- Divisions, Connect -->
+    <?php /* ?>  <!-- Divisions, Connect -->
     <div class="block">
         <div class="container">
             <div class="block-dark-background">
@@ -371,7 +362,7 @@ $gallery = $db->table('gallery')->orderBy('gallery_id', 'desc')->limit(14)->get(
             </div><!-- /.block-dark-background -->
         </div><!-- /.container -->
     </div>
-    <!-- end Divisions, Connect -->
+    <!-- end Divisions, Connect --><?php */ ?>
 
     <!-- Our Professors, Gallery -->
     <div class="block">

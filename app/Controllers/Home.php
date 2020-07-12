@@ -1,20 +1,26 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 class Home extends BaseController
 {
 	public function index()
 	{
+		$page_data['news'] = $this->db->table('news')->orderBy('news_id', 'desc')->limit(3)->get()->getResult('array');
+		$page_data['images'] = $this->db->table('slider')->orderBy('slider_id', 'desc')->get()->getResult('array');
+		$page_data['gallery'] = $this->db->table('gallery')->orderBy('gallery_id', 'desc')->limit(14)->get()->getResult('array');
 		$page_data['page'] = "home";
-		return view('front/index',$page_data);
+		return view('front/index', $page_data);
 	}
 	public function page($page)
 	{
-		$page_data['page'] = 'pages/'.$page;
+		$page_data['page'] = 'pages/' . $page;
 		return view('front/index', $page_data);
 	}
 
-	public function form($para1 = ''){
-		if($para1 == 'contact') {
+	public function form($para1 = '')
+	{
+		if ($para1 == 'contact') {
 			$data['contact_name'] = $this->request->getPost('name');
 			$data['contact_phone'] = $this->request->getPost('phone');
 			$data['contact_email'] = $this->request->getPost('email');
@@ -25,7 +31,7 @@ class Home extends BaseController
 			$output['success'] = true;
 			$output['message'] = 'Successfully Submitted';
 			echo json_encode($output);
-		} elseif($para1 == 'admission') {
+		} elseif ($para1 == 'admission') {
 			$data['admission_name'] = $this->request->getPost('name');
 			$data['admission_phone'] = $this->request->getPost('phone');
 			$data['admission_level'] = $this->request->getPost('level');

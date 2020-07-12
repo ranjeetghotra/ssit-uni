@@ -13,7 +13,7 @@
                     </nav>
                 </div>
                 <div class="col-lg-6 col-5 text-right">
-                    <button class="btn btn-sm btn-neutral">New</button>
+                    <button class="btn btn-sm btn-neutral" data-toggle="modal" data-target="#newsModal">New</button>
                 </div>
             </div>
         </div>
@@ -42,6 +42,33 @@
     <!-- Footer -->
     <?php include('partial/footer.php') ?>
 </div>
+<form action="/manage/news/new" class="ajax-form" data-type="table">
+    <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="card bg-secondary border-0 mb-0">
+                        <div class="card-body px-lg-5 py-lg-5">
+                            <div class="text-center text-muted mb-4">
+                                <small>Enter News or Notification</small>
+                            </div>
+                            <form role="form">
+                                <div class="form-group mb-3">
+                                        <textarea class="form-control form-control-alternative" placeholder="Notification" name="news"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary my-4 modal-dismiss">Submit</button>
+                                    <button type="button" class="btn btn-secondary my-4" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
 <script>
     var table;
 

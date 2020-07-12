@@ -217,6 +217,58 @@ class Manage extends BaseController
 			return view('back/index', $page);
 		}
 	}
+	public function news($para1 = '', $para2 = '')
+	{
+		if ($para1 == "delete") {
+			$this->db->table('news')->where(['news_id' => $para2])->delete();
+		} elseif($para1 == 'new') {
+			$data['news_title'] = $this->request->getPost('news');
+			$data['news_created_at'] = date('Y-m-d H:i:s');
+			$this->db->table('news')->insert($data);
+			$output['success'] = true;
+			$output['message'] = 'Successfully Submitted';
+			echo json_encode($output);
+		} elseif ($para1 == "list_data") {
+			// $contact = $this->db->table('contact')->orderBy('contact_id', 'desc')->get()->getResult('array');
+			$limit = $this->request->getPost('length');
+			$start = $this->request->getPost('start');
+			$search = $this->request->getPost('search')['value'];
+			$order = $this->request->getPost('order')[0]['column'];
+			$dir = $this->request->getPost('order')[0]['dir'];
+			$data = array();
+
+			$builder = $this->db->table('news');
+			if ($search) {
+				// $builder->like('subcat_name', $search, 'both');
+				// $builder->orlike('category_name', $search, 'both');
+			}
+			// $subcat = $builder->join('category', 'subcat.subcat_category = category.category_id')->get()->getResult('array');
+			$builder->orderBy('news_id', 'desc');
+			$contact = $builder->get()->getResult('array');
+			$i = $start;
+			foreach (array_slice($contact, $start, $limit) as $item) {
+				$p = array();
+				$p[] = ++$i;
+				$p[] = $item['news_title'];
+				$p[] = date('j M Y / h:i A', strtotime($item['news_created_at']));
+				$p[] = '<div class="dropdown show"><a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</a>'
+					. '<div class="dropdown-menu" style="min-width:inherit" aria-labelledby="dropdownMenuLink">'
+					// . '<li data-toggle="modal" data-target="#viewModal" data-id="' . $item['contact_id'] . '" data-subject="' . $item['contact_subject'] . '" class="dropdown-item item-view"><i class="fas fa-eye fa-sm mr-2"></i>Edit</li>'
+					. '<li data-id="' . $item['news_id'] . '" class="dropdown-item text-white bg-danger item-delete"><i class="fas fa-trash fa-sm mr-2"></i>Delete</li>'
+					. '</div></div>';
+				$data[] = $p;
+			}
+			$output["draw"] = intval($this->request->getPost('draw'));
+			$output['recordsTotal'] = count($contact);
+			$output['recordsFiltered'] = count($contact);
+			$output['data'] = $data;
+			return json_encode($output, true);
+		}
+		else {
+			$page['page'] = 'news';
+			return view('back/index', $page);
+		}
+	}
 	public function slider($para1 = '', $para2 = '')
 	{
 		if ($para1 == 'upload') {

@@ -77,7 +77,7 @@
                             society.
                         </p>
                         <div>
-                            <a href="" class="read-more">All News</a>
+                            <a href="/about-us" class="read-more">Read More</a>
                         </div>
                     </aside>
                 </div><!-- /.col-md-3 -->

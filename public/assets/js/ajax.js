@@ -23,6 +23,9 @@ function ajax_form(form) {
         if (form.data("type") == "login") {
           window.location.reload();
         }
+        if (form.data("type") == "table") {
+          table.ajax.reload();
+        }
       } else {
         toastr.error(data.message);
       }
@@ -56,5 +59,6 @@ $(document).on("submit", ".ajax-form", function () {
   ajax_form($(this));
 });
 $(document).on("click", ".modal-dismiss", function () {
+  jQuery.noConflict();
   $(this).parents(".modal").modal("hide");
 });
