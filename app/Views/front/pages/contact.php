@@ -53,7 +53,7 @@
                         <header>
                             <h2>Send Us a Message</h2>
                         </header>
-                        <form class="contact-form" id="contactform" method="post" action="">
+                        <form class="contact-form ajax-form" id="contactform" method="post" action="/home/form/contact">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-group">
@@ -67,7 +67,25 @@
                                     <div class="input-group">
                                         <div class="controls">
                                             <label for="email">Your Email</label>
-                                            <input type="email" name="email" id="email" required="">
+                                            <input type="email" name="email" id="email">
+                                        </div><!-- /.controls -->
+                                    </div><!-- /.control-group -->
+                                </div><!-- /.col-md-4 -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="controls">
+                                            <label for="name">Phone</label>
+                                            <input type="tel" name="phone" id="phone" required="">
+                                        </div><!-- /.controls -->
+                                    </div><!-- /.control-group -->
+                                </div><!-- /.col-md-4 -->
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="controls">
+                                            <label for="email">Subject</label>
+                                            <input type="text" name="subject" id="subject" required="">
                                         </div><!-- /.controls -->
                                     </div><!-- /.control-group -->
                                 </div><!-- /.col-md-4 -->

@@ -16,23 +16,23 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <h1>Join the comunity of modern thinking students</h1>
-                                    <form id="slider-form" role="form" action="" method="post">
+                                    <form class="ajax-form" role="form" action="/home/form/admission" method="post">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <input class="form-control has-dark-background" name="slider-name" id="slider-name" placeholder="Full Name" type="text" required="">
+                                                    <input class="form-control has-dark-background" name="name" id="slider-name" placeholder="Full Name" type="text" required="">
                                                 </div>
                                             </div><!-- /.col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <input class="form-control has-dark-background" name="slider-email" id="slider-email" placeholder="Email" type="email" required="">
+                                                    <input class="form-control has-dark-background" name="phone" id="slider-email" placeholder="Phone" type="tel" required="">
                                                 </div>
                                             </div><!-- /.col-md-6 -->
                                         </div><!-- /.row -->
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <select name="slider-study-level" id="slider-study-level" class="has-dark-background">
+                                                    <select name="level" id="slider-study-level" class="has-dark-background">
                                                         <option value="- Not selected -">Study Level</option>
                                                         <option value="Beginner">Beginner</option>
                                                         <option value="Advanced">Advanced</option>
@@ -43,7 +43,7 @@
                                             </div><!-- /.col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <select name="slider-course" id="slider-course" class="has-dark-background">
+                                                    <select name="course" id="slider-course" class="has-dark-background">
                                                         <option value="- Not selected -">Courses</option>
                                                         <option value="Art and Design">Art and Design</option>
                                                         <option value="Marketing">Marketing</option>

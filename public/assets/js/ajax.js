@@ -1,8 +1,8 @@
 function ajax_form(form) {
-  /*var btn = form.find(":submit");
-	var btnText = btn.html();
-	btn.html(btn.data("ing"));
-	btn.prop("disabled", true);*/
+  var btn = form.find(":submit");
+	/*var btnText = btn.html();
+	btn.html(btn.data("ing"));*/
+	btn.prop("disabled", true);
   var formdata = false;
   if (window.FormData) {
     formdata = new FormData(form[0]);
@@ -19,16 +19,16 @@ function ajax_form(form) {
       data = JSON.parse(data);
       if (data.success) {
         toastr.success(data.message);
+        form[0].reset();
         if (form.data("type") == "login") {
           window.location.reload();
         }
       } else {
         toastr.error(data.message);
       }
+			btn.prop("disabled", false);
       //return data;
       /*btn.html(btnText);
-			btn.prop("disabled", false);
-			form[0].reset();
 			$("#extra_fields").hide();
 			$("#message").html("Product inserted");
 			data = JSON.parse(data);

@@ -27,7 +27,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <div class="navbar-brand nav" id="brand">
-                        <a href="index.html"><img src="assets/img/logo.png" alt="brand"></a>
+                        <a href="/"><img src="assets/img/logo.png" alt="brand"></a>
                     </div>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
@@ -64,6 +64,9 @@
                                 <li><a href="/chairman-message">Chairman's Message</a></li>
                                 <li><a href="/principal-message">Principal's Message</a></li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href="/press-release">Press Release</a>
                         </li>
                         <li>
                             <a href="/gallery">Gallery</a>

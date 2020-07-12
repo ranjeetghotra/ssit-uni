@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/vanillabox/vanillabox.css" type="text/css">
 
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
 
     <title>Universo - Educational, Course and University Template</title>
     <style>
@@ -26,7 +27,7 @@
 
 </head>
 
-<body class="<?=$page=='home'?"page-homepage-carousel":"page-sub-page page-contact"?>">
+<body class="<?= $page == 'home' ? "page-homepage-carousel" : "page-sub-page page-contact" ?>">
     <!-- Wrapper -->
     <div class="wrapper">
         <!-- Header -->
@@ -34,7 +35,7 @@
         <!-- end Header -->
 
         <!-- Page Content -->
-        <?php include($page.'.php') ?>
+        <?php include($page . '.php') ?>
         <!-- end Page Content -->
 
         <!-- Footer -->
@@ -57,6 +58,8 @@
     <script type="text/javascript" src="assetss/js/retina-1.1.0.min.js"></script>
 
     <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script src="/assets/js/ajax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 
 </body>
 

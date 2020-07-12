@@ -35,22 +35,22 @@
                             <span class="nav-link-text">Pages</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="icons.html">
+                    <li class="nav-item <?= $page == "slider" ? "active" : "" ?>">
+                        <a class="nav-link" href="/manage/slider">
                             <i class="ni ni-planet text-orange"></i>
-                            <span class="nav-link-text">Icons</span>
+                            <span class="nav-link-text">Slider</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="map.html">
+                    <li class="nav-item <?= $page == "contact" ? "active" : "" ?>">
+                        <a class="nav-link" href="/manage/contact">
                             <i class="ni ni-pin-3 text-primary"></i>
-                            <span class="nav-link-text">Google</span>
+                            <span class="nav-link-text">Contact</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html">
+                    <li class="nav-item <?= $page == "admission" ? "active" : "" ?>">
+                        <a class="nav-link" href="/manage/admission">
                             <i class="ni ni-single-02 text-yellow"></i>
-                            <span class="nav-link-text">Profile</span>
+                            <span class="nav-link-text">Admission</span>
                         </a>
                     </li>
                     <li class="nav-item">

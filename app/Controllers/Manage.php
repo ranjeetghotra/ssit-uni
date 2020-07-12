@@ -63,7 +63,8 @@ class Manage extends BaseController
 		} elseif ($para1 == 'images') {
 			$page_data['images'] = $this->db->table('gallery')->orderBy('gallery_id', 'desc')->get()->getResult('array');
 			return view('back/gallery_images', $page_data);
-		} else {
+		}
+		else {
 			$page_data['page'] = 'gallery';
 			return view('back/index', $page_data);
 		}
@@ -87,7 +88,8 @@ class Manage extends BaseController
 		} elseif ($para1 == 'images') {
 			$page_data['images'] = $this->db->table('press')->orderBy('press_id', 'desc')->get()->getResult('array');
 			return view('back/press_images', $page_data);
-		} else {
+		}
+		else {
 			$page_data['page'] = 'press';
 			return view('back/index', $page_data);
 		}
@@ -100,6 +102,106 @@ class Manage extends BaseController
 		} else {
 			$page_data['page'] = 'page';
 			return view('back/index', $page_data);
+		}
+	}
+	public function admission($para1 = '', $para2 = '')
+	{
+		if ($para1 == "message") {
+			return $this->db->table('admission')->getWhere(['admission_id' => $para2])->getRow()->contact_message;
+		} elseif ($para1 == "delete") {
+			$this->db->table('admission')->where(['admission_id' => $para2])->delete();
+		}
+		elseif ($para1 == "list_data") {
+			// $contact = $this->db->table('contact')->orderBy('contact_id', 'desc')->get()->getResult('array');
+			$limit = $this->request->getPost('length');
+			$start = $this->request->getPost('start');
+			$search = $this->request->getPost('search')['value'];
+			$order = $this->request->getPost('order')[0]['column'];
+			$dir = $this->request->getPost('order')[0]['dir'];
+			$data = array();
+
+			$builder = $this->db->table('admission');
+			if ($search) {
+				// $builder->like('subcat_name', $search, 'both');
+				// $builder->orlike('category_name', $search, 'both');
+			}
+			// $subcat = $builder->join('category', 'subcat.subcat_category = category.category_id')->get()->getResult('array');
+			$builder->orderBy('admission_id', 'desc');
+			$contact = $builder->get()->getResult('array');
+			$i = $start;
+			foreach (array_slice($contact, $start, $limit) as $item) {
+				$p = array();
+				$p[] = ++$i;
+				$p[] = $item['admission_name'];
+				$p[] = $item['admission_phone'];
+				$p[] = $item['admission_level'];
+				$p[] = $item['admission_course'];
+				$p[] = '<div class="dropdown show"><a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</a>'
+					. '<div class="dropdown-menu" style="min-width:inherit" aria-labelledby="dropdownMenuLink">'
+					//. '<li data-toggle="modal" data-target="#viewModal" data-id="' . $item['contact_id'] . '" data-subject="' . $item['admission_subject'] . '" class="dropdown-item item-view"><i class="fas fa-eye fa-sm mr-2"></i>Edit</li>'
+					. '<li data-id="' . $item['admission_id'] . '" class="dropdown-item text-white bg-danger item-delete"><i class="fas fa-trash fa-sm mr-2"></i>Delete</li>'
+					. '</div></div>';
+				$data[] = $p;
+			}
+			$output["draw"] = intval($this->request->getPost('draw'));
+			$output['recordsTotal'] = count($contact);
+			$output['recordsFiltered'] = count($contact);
+			$output['data'] = $data;
+			return json_encode($output, true);
+		}
+		else {
+			$page['page'] = 'admission';
+			return view('back/index', $page);
+		}
+	}
+	public function contact($para1 = '', $para2 = '')
+	{
+		if ($para1 == "message") {
+			return $this->db->table('contact')->getWhere(['contact_id' => $para2])->getRow()->contact_message;
+		} elseif ($para1 == "delete") {
+			$this->db->table('contact')->where(['contact_id' => $para2])->delete();
+		}
+		elseif ($para1 == "list_data") {
+			// $contact = $this->db->table('contact')->orderBy('contact_id', 'desc')->get()->getResult('array');
+			$limit = $this->request->getPost('length');
+			$start = $this->request->getPost('start');
+			$search = $this->request->getPost('search')['value'];
+			$order = $this->request->getPost('order')[0]['column'];
+			$dir = $this->request->getPost('order')[0]['dir'];
+			$data = array();
+
+			$builder = $this->db->table('contact');
+			if ($search) {
+				// $builder->like('subcat_name', $search, 'both');
+				// $builder->orlike('category_name', $search, 'both');
+			}
+			// $subcat = $builder->join('category', 'subcat.subcat_category = category.category_id')->get()->getResult('array');
+			$builder->orderBy('contact_id', 'desc');
+			$contact = $builder->get()->getResult('array');
+			$i = $start;
+			foreach (array_slice($contact, $start, $limit) as $item) {
+				$p = array();
+				$p[] = ++$i;
+				$p[] = $item['contact_name'];
+				$p[] = $item['contact_phone'];
+				$p[] = $item['contact_email'];
+				$p[] = $item['contact_subject'];
+				$p[] = '<div class="dropdown show"><a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</a>'
+					. '<div class="dropdown-menu" style="min-width:inherit" aria-labelledby="dropdownMenuLink">'
+					. '<li data-toggle="modal" data-target="#viewModal" data-id="' . $item['contact_id'] . '" data-subject="' . $item['contact_subject'] . '" class="dropdown-item item-view"><i class="fas fa-eye fa-sm mr-2"></i>Edit</li>'
+					. '<li data-id="' . $item['contact_id'] . '" class="dropdown-item text-white bg-danger item-delete"><i class="fas fa-trash fa-sm mr-2"></i>Delete</li>'
+					. '</div></div>';
+				$data[] = $p;
+			}
+			$output["draw"] = intval($this->request->getPost('draw'));
+			$output['recordsTotal'] = count($contact);
+			$output['recordsFiltered'] = count($contact);
+			$output['data'] = $data;
+			return json_encode($output, true);
+		}
+		else {
+			$page['page'] = 'contact';
+			return view('back/index', $page);
 		}
 	}
 

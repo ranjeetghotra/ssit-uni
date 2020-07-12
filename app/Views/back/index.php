@@ -33,6 +33,7 @@
   <!-- Argon CSS -->
   <link rel="stylesheet" href="/assets/css/argon.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.21/datatables.min.css" />
   <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
 </head>
 
@@ -44,7 +45,7 @@
     <!-- Topnav -->
     <?php include 'partial/topnav.php' ?>
     <!-- Header -->
-    <?php include $page.'.php' ?>
+    <?php include $page . '.php' ?>
   </div>
   <!-- Argon Scripts -->
   <!-- Core -->
@@ -58,6 +59,7 @@
   <!-- Argon JS -->
   <script src="/assets/js/argon.js"></script>
   <script src="/assets/js/ajax.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.21/datatables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 </body>
 
