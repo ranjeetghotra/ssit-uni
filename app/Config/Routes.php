@@ -31,13 +31,13 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('', 'Home::index');
-$routes->add('gallery', 'Home::page/gallery');
-$routes->add('press-release', 'Home::page/press');
-$routes->add('contact-us', 'Home::page/contact');
-$routes->add('about-us', 'Home::page/about');
-$routes->add('vision-mission', 'Home::page/vision');
-$routes->add('chairman-message', 'Home::page/chairman-message');
-$routes->add('principal-message', 'Home::page/principal-message');
+$routes->add('gallery', 'Home::page/gallery/Gallery');
+$routes->add('press-release', 'Home::page/press/Press Release');
+$routes->add('contact-us', 'Home::page/contact/Contact us');
+$routes->add('about-us', 'Home::page/about/About us');
+$routes->add('vision-mission', 'Home::page/vision/Vision & Mission');
+$routes->add('chairman-message', 'Home::page/chairman-message/Chairman Message');
+$routes->add('principal-message', 'Home::page/principal-message/Principal Message');
 
 
 $routes->add('auth/admin', 'Manage::login');

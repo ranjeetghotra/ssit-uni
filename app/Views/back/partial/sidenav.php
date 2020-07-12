@@ -53,32 +53,8 @@
                             <span class="nav-link-text">Admission</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tables.html">
-                            <i class="ni ni-bullet-list-67 text-default"></i>
-                            <span class="nav-link-text">Tables</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">
-                            <i class="ni ni-key-25 text-info"></i>
-                            <span class="nav-link-text">Login</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.html">
-                            <i class="ni ni-circle-08 text-pink"></i>
-                            <span class="nav-link-text">Register</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="upgrade.html">
-                            <i class="ni ni-send text-dark"></i>
-                            <span class="nav-link-text">Upgrade</span>
-                        </a>
-                    </li>
                 </ul>
-                <!-- Divider -->
+                <?php /*<!-- Divider -->
                 <hr class="my-3">
                 <!-- Heading -->
                 <h6 class="navbar-heading p-0 text-muted">
@@ -110,7 +86,7 @@
                             <span class="nav-link-text">Plugins</span>
                         </a>
                     </li>
-                </ul>
+                </ul>*/ ?>
             </div>
         </div>
     </div>

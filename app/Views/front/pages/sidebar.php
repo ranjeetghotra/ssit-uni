@@ -24,12 +24,14 @@ $sideNews = $db->table('news')->orderBy('news_id', 'desc')->limit(3)->get()->get
                 <h2>Newsletter</h2>
                 <div class="section-content">
                     <div class="newsletter">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Your e-mail">
-                            <span class="input-group-btn">
-                                <button type="submit" class="btn"><i class="fa fa-angle-right"></i></button>
-                            </span>
-                        </div><!-- /input-group -->
+                        <form action="/home/form/newsletter" class="ajax-form">
+                            <div class="input-group">
+                                <input type="email" name="email" class="form-control" placeholder="Your e-mail">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn"><i class="fa fa-angle-right"></i></button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </form>
                     </div><!-- /.newsletter -->
                     <p class="opacity-50">Ut tincidunt, quam in tincidunt vestibulum, turpis ipsum porttitor nisi, et fermentum augue
                         lit eu neque. In at tempor dolor, sit amet dictum lacus. Praesent porta orci eget laoreet ultrices.

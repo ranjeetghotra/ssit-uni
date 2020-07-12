@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2020 at 02:26 PM
+-- Generation Time: Jul 12, 2020 at 07:51 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -57,6 +57,13 @@ CREATE TABLE `admission` (
   `admission_created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `admission`
+--
+
+INSERT INTO `admission` (`admission_id`, `admission_name`, `admission_phone`, `admission_level`, `admission_course`, `admission_created_at`) VALUES
+(2, 'R d', '9781838309', 'Beginner', 'Art and Design', '2020-07-12 16:58:18');
+
 -- --------------------------------------------------------
 
 --
@@ -72,6 +79,13 @@ CREATE TABLE `contact` (
   `contact_message` text NOT NULL,
   `contact_created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`contact_id`, `contact_name`, `contact_email`, `contact_phone`, `contact_subject`, `contact_message`, `contact_created_at`) VALUES
+(4, 'gdfgdfgdfgdf', 'ranjeetghotra6@gmail.com', '9781838309', 'fgdfgdg', 'dfgfgfg', '2020-07-12 16:54:51');
 
 -- --------------------------------------------------------
 
@@ -114,6 +128,26 @@ INSERT INTO `news` (`news_id`, `news_title`, `news_created_at`) VALUES
 (3, 'Admission open for academic session 2018-2019', '2020-07-12 12:01:54'),
 (4, '	Admission Helplines: 8449470500, 8445385546', '2020-07-12 12:02:06'),
 (5, 'Welcome to Sri Sai Institute of Technology', '2020-07-12 12:02:30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `newsletter_id` int(11) NOT NULL,
+  `newsletter_email` varchar(200) NOT NULL,
+  `newsletter_created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `newsletter`
+--
+
+INSERT INTO `newsletter` (`newsletter_id`, `newsletter_email`, `newsletter_created_at`) VALUES
+(1, 'ranjeetghotra6@gmail.com', '2020-07-12 17:17:07'),
+(2, 'themarvelons@gmail.com', '2020-07-12 17:17:14');
 
 -- --------------------------------------------------------
 
@@ -183,6 +217,12 @@ ALTER TABLE `news`
   ADD PRIMARY KEY (`news_id`);
 
 --
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`newsletter_id`);
+
+--
 -- Indexes for table `press`
 --
 ALTER TABLE `press`
@@ -208,13 +248,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `admission`
 --
 ALTER TABLE `admission`
-  MODIFY `admission_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admission_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `gallery`
@@ -227,6 +267,12 @@ ALTER TABLE `gallery`
 --
 ALTER TABLE `news`
   MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `newsletter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `press`

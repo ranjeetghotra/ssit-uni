@@ -12,8 +12,11 @@ class Home extends BaseController
 		$page_data['page'] = "home";
 		return view('front/index', $page_data);
 	}
-	public function page($page)
+	public function page($page, $title = false)
 	{
+		if($title) {
+			$page_data['title'] = $title;
+		}
 		$page_data['page'] = 'pages/' . $page;
 		return view('front/index', $page_data);
 	}
@@ -40,6 +43,13 @@ class Home extends BaseController
 			$this->db->table('admission')->insert($data);
 			$output['success'] = true;
 			$output['message'] = 'Successfully Submitted';
+			echo json_encode($output);
+		} elseif ($para1 == 'newsletter') {
+			$data['newsletter_email'] = $this->request->getPost('email');
+			$data['newsletter_created_at'] = date('Y-m-d H:i:s');
+			$this->db->table('newsletter')->insert($data);
+			$output['success'] = true;
+			$output['message'] = 'Successfully Subscribed';
 			echo json_encode($output);
 		}
 	}

@@ -11,6 +11,12 @@ class Manage extends BaseController
 	}
 	public function index()
 	{
+		$page_data['count']['admission'] = $this->db->table('admission')->countAll();
+		$page_data['count']['contact'] = $this->db->table('contact')->countAll();
+		$page_data['count']['gallery'] = $this->db->table('gallery')->countAll();
+		$page_data['count']['press'] = $this->db->table('press')->countAll();
+		$page_data['table']['admission'] = $this->db->table('admission')->limit(5)->orderBy('admission_id', 'desc')->get()->getResult('array');
+		$page_data['table']['contact'] = $this->db->table('contact')->limit(5)->orderBy('contact_id', 'desc')->get()->getResult('array');
 		$page_data['page'] = "home";
 		return view('back/index', $page_data);
 	}
@@ -63,16 +69,14 @@ class Manage extends BaseController
 		} elseif ($para1 == 'images') {
 			$page_data['images'] = $this->db->table('gallery')->orderBy('gallery_id', 'desc')->get()->getResult('array');
 			return view('back/gallery_images', $page_data);
-		}
-		elseif ($para1 == 'delete') {
+		} elseif ($para1 == 'delete') {
 			$image = $this->db->table('gallery')->getWhere(['gallery_id' => $para2])->getRow()->gallery_name;
 			$this->db->table('gallery')->where(['gallery_id' => $para2])->delete();
 			if ($image) {
 				unlink('images/gallery/full/' . $image);
 				unlink('images/gallery/thumb/' . $image);
 			}
-		}
-		else {
+		} else {
 			$page_data['page'] = 'gallery';
 			return view('back/index', $page_data);
 		}
@@ -96,16 +100,14 @@ class Manage extends BaseController
 		} elseif ($para1 == 'images') {
 			$page_data['images'] = $this->db->table('press')->orderBy('press_id', 'desc')->get()->getResult('array');
 			return view('back/press_images', $page_data);
-		}
-		elseif ($para1 == 'delete') {
+		} elseif ($para1 == 'delete') {
 			$image = $this->db->table('press')->getWhere(['press_id' => $para2])->getRow()->press_name;
 			$this->db->table('press')->where(['press_id' => $para2])->delete();
 			if ($image) {
 				unlink('images/press/full/' . $image);
 				unlink('images/press/thumb/' . $image);
 			}
-		}
-		else {
+		} else {
 			$page_data['page'] = 'press';
 			return view('back/index', $page_data);
 		}
@@ -126,8 +128,7 @@ class Manage extends BaseController
 			return $this->db->table('admission')->getWhere(['admission_id' => $para2])->getRow()->contact_message;
 		} elseif ($para1 == "delete") {
 			$this->db->table('admission')->where(['admission_id' => $para2])->delete();
-		}
-		elseif ($para1 == "list_data") {
+		} elseif ($para1 == "list_data") {
 			// $contact = $this->db->table('contact')->orderBy('contact_id', 'desc')->get()->getResult('array');
 			$limit = $this->request->getPost('length');
 			$start = $this->request->getPost('start');
@@ -164,8 +165,7 @@ class Manage extends BaseController
 			$output['recordsFiltered'] = count($contact);
 			$output['data'] = $data;
 			return json_encode($output, true);
-		}
-		else {
+		} else {
 			$page['page'] = 'admission';
 			return view('back/index', $page);
 		}
@@ -211,8 +211,7 @@ class Manage extends BaseController
 			$output['recordsFiltered'] = count($contact);
 			$output['data'] = $data;
 			return json_encode($output, true);
-		}
-		else {
+		} else {
 			$page['page'] = 'contact';
 			return view('back/index', $page);
 		}
@@ -221,7 +220,7 @@ class Manage extends BaseController
 	{
 		if ($para1 == "delete") {
 			$this->db->table('news')->where(['news_id' => $para2])->delete();
-		} elseif($para1 == 'new') {
+		} elseif ($para1 == 'new') {
 			$data['news_title'] = $this->request->getPost('news');
 			$data['news_created_at'] = date('Y-m-d H:i:s');
 			$this->db->table('news')->insert($data);
@@ -263,10 +262,29 @@ class Manage extends BaseController
 			$output['recordsFiltered'] = count($contact);
 			$output['data'] = $data;
 			return json_encode($output, true);
-		}
-		else {
+		} else {
 			$page['page'] = 'news';
 			return view('back/index', $page);
+		}
+	}
+	public function setting($para1 = '')
+	{
+		if ($para1 == 'password') {
+			$oldPassword = $this->request->getPost('oldPassword');
+			$newPassword = $this->request->getPost('newPassword');
+			$confirmPassword = $this->request->getPost('confirmPassword');
+			$dbPass = $this->db->table('admin')->getWhere(['admin_id' => $this->session->get('admin_id')])->getRow()->admin_password;
+			if ($newPassword !== $confirmPassword) {
+				$output['success'] = false;
+				$output['message'] = "Confirm Password Mismatched";
+			} elseif ($oldPassword !== $dbPass) {
+				$output['success'] = false;
+				$output['message'] = "Old Password Mismatched";
+			} else {
+				$output['success'] = true;
+				$output['message'] = "Password Changed";
+			}
+			echo json_encode($output);
 		}
 	}
 	public function slider($para1 = '', $para2 = '')
@@ -288,16 +306,14 @@ class Manage extends BaseController
 		} elseif ($para1 == 'images') {
 			$page_data['images'] = $this->db->table('slider')->orderBy('slider_id', 'desc')->get()->getResult('array');
 			return view('back/slider_images', $page_data);
-		}
-		elseif ($para1 == 'delete') {
+		} elseif ($para1 == 'delete') {
 			$image = $this->db->table('slider')->getWhere(['slider_id' => $para2])->getRow()->slider_name;
 			$this->db->table('slider')->where(['slider_id' => $para2])->delete();
 			if ($image) {
 				unlink('images/slider/full/' . $image);
 				unlink('images/slider/thumb/' . $image);
 			}
-		}
-		else {
+		} else {
 			$page_data['page'] = 'slider';
 			return view('back/index', $page_data);
 		}

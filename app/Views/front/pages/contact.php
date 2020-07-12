@@ -20,15 +20,15 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <address>
-                                    <h3>University of Universo</h3>
+                                    <h3>Sri Sai Institute of Technology</h3>
                                     <br>
-                                    <span>4877 Spruce Drive</span>
+                                    <span>Mahua Dabra, Jaspur, Udham Singh Nagar,</span>
                                     <br><br>
-                                    <span>West Newton, PA 15089</span>
+                                    <span>Uttarakhand (India)</span>
                                     <br>
-                                    <abbr title="Telephone">Telephone:</abbr> +1 (734) 123-4567
+                                    <abbr title="Telephone">Telephone:</abbr> 05947-222088 (o), +91-9837270888 (m)
                                     <br>
-                                    <abbr title="Email">Email:</abbr> <a href="#">questions@youruniversity.com</a>
+                                    <abbr title="Email">Email:</abbr> <a href="mailto:info@srisaiiot.com">info@srisaiiot.com</a> <a href="mailto:ssijaspur@gmail.com">ssijaspur@gmail.com</a>
                                 </address>
                                 <div class="icons">
                                     <a href=""><i class="fa fa-twitter"></i></a>
@@ -38,13 +38,12 @@
                                 </div><!-- /.icons -->
                                 <hr>
                                 <p>
-                                    Morbi rutrum massa eget mi gravida, sit amet mollis magna gravida. Morbi sodales,
-                                    ligula quis ornare bibendum, magna erat convallis ipsum, id posuere ligula massa vitae leo.
+                                    Kindly send your query here..
                                 </p>
                             </div>
                             <div class="col-md-6">
                                 <div class="map-wrapper">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.389928525137!2d-0.11316612883517647!3d51.52440760342934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b48959f07e1%3A0xb6b70e6a76950525!2s5+Phoenix+Pl!5e0!3m2!1ssk!2s!4v1395674632609" width="100%" height="350" frameborder="0" style="border:0"></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4149.785546411504!2d78.78706030556717!3d29.276569368167888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a49ac05565853%3A0xa4f122dc36571a97!2sSri+Sai+Institute+of+Technology+Jaspur!5e0!3m2!1sen!2sin!4v1534762037408" width="100%" height="350" frameborder="0" style="border:0"></iframe>
                                 </div>
                             </div>
                         </div>

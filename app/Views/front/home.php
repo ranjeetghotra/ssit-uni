@@ -159,24 +159,20 @@
                 <div class="author-carousel">
                     <div class="author">
                         <blockquote>
-                            <figure class="author-picture"><img src="assets/img/student-testimonial.jpg" alt=""></figure>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
-                                    <header>Morbi nec nisi ante. Quisque lacus ligula, iaculis in elit et, interdum semper quam. Fusce in interdum tortor.
-                                        Ut sollicitudin lectus dolor eget imperdiet libero pulvinar sit amet.</header>
-                                    <footer>Claire Doe</footer>
+                                    <header> Don’t let what you cannot do interfere with what you can do.</header>
+                                    <footer>John Wooden</footer>
                                 </div>
                             </article>
                         </blockquote>
                     </div><!-- /.author -->
                     <div class="author">
                         <blockquote>
-                            <figure class="author-picture"><img src="assets/img/student-testimonial.jpg" alt=""></figure>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
-                                    <header>Morbi nec nisi ante. Quisque lacus ligula, iaculis in elit et, interdum semper quam. Fusce in interdum tortor.
-                                        Ut sollicitudin lectus dolor eget imperdiet libero pulvinar sit amet.</header>
-                                    <footer>Claire Doe</footer>
+                                    <header> Failure is the opportunity to begin again more intelligently. </header>
+                                    <footer>Henry Ford</footer>
                                 </div>
                             </article>
                         </blockquote>
@@ -186,7 +182,7 @@
         </div><!-- /.block -->
     </section>
     <!-- end Testimonial -->
-
+    <?php /*
     <!-- Academic Life, Campus Life, Newsletter -->
     <div class="block">
         <div class="container">
@@ -250,7 +246,7 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div>
-    <!-- end Academic Life, Campus Life, Newsletter -->
+    <!-- end Academic Life, Campus Life, Newsletter -->*/ ?>
 
     <?php /* ?>  <!-- Divisions, Connect -->
     <div class="block">

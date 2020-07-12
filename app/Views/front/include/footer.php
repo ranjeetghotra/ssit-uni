@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-12">
                     <aside class="logo">
-                        <img src="assets/img/logo-white.png" class="vertical-center">
+                        <img src="/images/logo/logo-ssit-light.png" class="vertical-center" style="width: 85%;">
                     </aside>
                 </div><!-- /.col-md-3 -->
                 <div class="col-md-3 col-sm-4">
@@ -56,12 +56,11 @@
                             <h4>Important Links</h4>
                         </header>
                         <ul class="list-links">
-                            <li><a href="#">Future Students</a></li>
-                            <li><a href="#">Alumni</a></li>
-                            <li><a href="#">Give a Donation</a></li>
-                            <li><a href="#">Professors</a></li>
-                            <li><a href="#">Libary & Health</a></li>
-                            <li><a href="#">Research</a></li>
+                            <li><a href="/press-release">Press Release</a></li>
+                            <li><a href="/vision-mission">Vision & Mission</a></li>
+                            <li><a href="/gallery">Gallery</a></li>
+                            <li><a href="/about-us">About us</a></li>
+                            <li><a href="/contact-us">Contact us</a></li>
                         </ul>
                     </aside>
                 </div><!-- /.col-md-3 -->

@@ -5,20 +5,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Theme Starz">
+    <meta name="author" content="Ranjeet Ghotra">
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/selectize.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/vanillabox/vanillabox.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/vanillabox/vanillabox.css" type="text/css">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/vanillabox/vanillabox.css" type="text/css">
 
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
 
-    <title>Universo - Educational, Course and University Template</title>
+    <title><?= isset($title) ? $title . ' | ' : '' ?>Sri Sai Institute of Technology</title>
     <style>
         .breadcrumb {
             margin-bottom: 2rem;
