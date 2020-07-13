@@ -242,13 +242,13 @@
       <div class="modal-body p-0">
         <div class="card bg-secondary border-0 mb-0">
           <div class="card-body px-lg-5 py-lg-5">
-            <form role="form" class="ajax-form" action="/manage/setting/password">
+            <form role="form" class="ajax-form" data-type="modal" action="/manage/setting/password">
               <div class="form-group mb-3">
                 <div class="input-group input-group-merge input-group-alternative">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                   </div>
-                  <input class="form-control" placeholder="Current Password" type="password" name="currentPassword">
+                  <input class="form-control" placeholder="Current Password" type="password" name="currentPassword" required pattern=".{6,}">
                 </div>
               </div>
               <div class="form-group">
@@ -256,7 +256,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                   </div>
-                  <input class="form-control" placeholder="New Password" type="password" name="newPassword">
+                  <input class="form-control" placeholder="New Password" type="password" name="newPassword" required pattern=".{6,}">
                 </div>
               </div>
               <div class="form-group">
@@ -264,11 +264,11 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                   </div>
-                  <input class="form-control" placeholder="Confirm Password" type="password" name="confirmPassword">
+                  <input class="form-control" placeholder="Confirm Password" type="password" name="confirmPassword" required pattern=".{6,}">
                 </div>
               </div>
               <div class="text-center">
-                <button type="submit" class="btn btn-primary my-4 modal-dismiss">Change</button>
+                <button type="submit" class="btn btn-primary my-4">Change</button>
                 <button type="button" class="btn btn-secondary my-4" data-dismiss="modal">Cancel</button>
               </div>
             </form>

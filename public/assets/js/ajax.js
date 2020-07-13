@@ -1,8 +1,8 @@
 function ajax_form(form) {
   var btn = form.find(":submit");
-	/*var btnText = btn.html();
+  /*var btnText = btn.html();
 	btn.html(btn.data("ing"));*/
-	btn.prop("disabled", true);
+  btn.prop("disabled", true);
   var formdata = false;
   if (window.FormData) {
     formdata = new FormData(form[0]);
@@ -29,7 +29,7 @@ function ajax_form(form) {
       } else {
         toastr.error(data.message);
       }
-			btn.prop("disabled", false);
+      btn.prop("disabled", false);
       //return data;
       /*btn.html(btnText);
 			$("#extra_fields").hide();
@@ -56,6 +56,10 @@ function slugify(slug) {
 }
 $(document).on("submit", ".ajax-form", function () {
   event.preventDefault();
+  if ($(this).data("type") == "modal") {
+    jQuery.noConflict();
+    $(this).parents(".modal").modal("hide");
+  }
   ajax_form($(this));
 });
 $(document).on("click", ".modal-dismiss", function () {
