@@ -34,55 +34,6 @@
                             <strong>“Best Campus in Rural Area Award”</strong>, <strong>“Best Institute for Promoting
                                 Industry Academic Interface in Engineering Award”</strong> and many more by leading
                             organization of India.</p>
-                        <h2>Gallery</h2>
-                        <div>
-                            <ul class="gallery-list">
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-01.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-02.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-03.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-04.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-05.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-06.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-07.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-08.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-09.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-10.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-11.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-12.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-13.jpg" alt=""></a></li>
-                                <li><a href="assets\img\gallery-big-image.jpg" class="image-popup"><img
-                                            src="assets\img\image-14.jpg" alt=""></a></li>
-                            </ul>
-                            <a href="" class="read-more">Go to Gallery</a>
-                        </div>
-                        <h2>Research</h2>
-                        <p>
-                            Sed bibendum, tortor in ornare sodales, sem augue suscipit tortor, auctor placerat nisi
-                            justo vel mauris.
-                            In convallis nunc nunc, in tincidunt leo volutpat et. Donec in consequat lorem.
-                        </p>
-                        <ul class="element-framed">
-                            <li>Aenean volutpat aliquet diam, id venenatis nisi faucibus sit amet. In hac habitasse
-                                platea dictumst</li>
-                            <li>Integer vel sem est. Nulla pharetra, justo vitae placerat dapibus, dui massa
-                                pellentesque magn</li>
-                            <li>Sagittis magna lorem a massa. Integer convallis augue eu felis euismod, vel iaculis
-                                velit pretium</li>
-                            <li>Nam et diam ut sem aliquet ultrices non eu ante</li>
-                        </ul>
                     </section>
                 </div><!-- /#page-main -->
             </div><!-- /.col-md-8 -->

@@ -32,7 +32,7 @@
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li class="">
                             <a href="/">Home</a>
                         </li>
                         <!--<li>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/vanillabox/vanillabox.css" type="text/css">
-
+    <link rel="icon" type="image/png" href="/images/logo/favicon.ico" sizes="32x32" />
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
 

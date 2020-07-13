@@ -17,7 +17,7 @@ $sideNews = $db->table('news')->orderBy('news_id', 'desc')->limit(3)->get()->get
                     </article><!-- /article -->
                 <?php endforeach ?>
             </div><!-- /.section-content -->
-            <a href="" class="read-more">All News</a>
+            <!--<a href="" class="read-more">All News</a>-->
         </aside><!-- /.news-small -->
         <aside id="newsletter">
             <header>
