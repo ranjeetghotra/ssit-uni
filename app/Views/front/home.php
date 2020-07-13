@@ -6,9 +6,9 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-7">
                         <div class="image-carousel">
-                            <div class="image-carousel-slide"><img src="assets/img/slide-1.jpg" alt=""></div>
-                            <div class="image-carousel-slide"><img src="assets/img/slide-2.jpg" alt=""></div>
-                            <div class="image-carousel-slide"><img src="assets/img/slide-3.jpg" alt=""></div>
+                            <?php foreach ($images as $img) : ?>
+                                <div class="image-carousel-slide"><img src="/images/slider/full/<?= $img['slider_name'] ?>" alt=""></div>
+                            <?php endforeach ?>
                         </div><!-- /.slider-image -->
                     </div><!-- /.col-md-6 -->
                     <div class="col-md-6 col-sm-5">
@@ -16,23 +16,23 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <h1>Join the comunity of modern thinking students</h1>
-                                    <form id="slider-form" role="form" action="" method="post">
+                                    <form class="ajax-form" role="form" action="/home/form/admission" method="post">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <input class="form-control has-dark-background" name="slider-name" id="slider-name" placeholder="Full Name" type="text" required="">
+                                                    <input class="form-control has-dark-background" name="name" id="slider-name" placeholder="Full Name" type="text" required="">
                                                 </div>
                                             </div><!-- /.col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <input class="form-control has-dark-background" name="slider-email" id="slider-email" placeholder="Email" type="email" required="">
+                                                    <input class="form-control has-dark-background" name="phone" id="slider-email" placeholder="Phone" type="tel" required="">
                                                 </div>
                                             </div><!-- /.col-md-6 -->
                                         </div><!-- /.row -->
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <select name="slider-study-level" id="slider-study-level" class="has-dark-background">
+                                                    <select name="level" id="slider-study-level" class="has-dark-background">
                                                         <option value="- Not selected -">Study Level</option>
                                                         <option value="Beginner">Beginner</option>
                                                         <option value="Advanced">Advanced</option>
@@ -43,7 +43,7 @@
                                             </div><!-- /.col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <select name="slider-course" id="slider-course" class="has-dark-background">
+                                                    <select name="course" id="slider-course" class="has-dark-background">
                                                         <option value="- Not selected -">Courses</option>
                                                         <option value="Art and Design">Art and Design</option>
                                                         <option value="Marketing">Marketing</option>
@@ -78,20 +78,14 @@
                             <h2>News</h2>
                         </header>
                         <div class="section-content">
-                            <article>
-                                <figure class="date"><i class="fa fa-file-o"></i>08-24-2014</figure>
-                                <header><a href="#">U-M School of Public Health, Detroit partners aim to improve air quality in the city</a></header>
-                            </article><!-- /article -->
-                            <article>
-                                <figure class="date"><i class="fa fa-file-o"></i>08-24-2014</figure>
-                                <header><a href="#">At 50, Center for the Education of Women celebrates a wider mission</a></header>
-                            </article><!-- /article -->
-                            <article>
-                                <figure class="date"><i class="fa fa-file-o"></i>08-24-2014</figure>
-                                <header><a href="#">Three U-Michigan scientists receive Sloan fellowships</a></header>
-                            </article><!-- /article -->
+                            <?php foreach ($news as $n) : ?>
+                                <article>
+                                    <figure class="date"><i class="fa fa-file-o"></i><?= date('j-M-Y', strtotime($n['news_created_at'])) ?></figure>
+                                    <header><a><?= $n['news_title'] ?></a></header>
+                                </article><!-- /article -->
+                            <?php endforeach ?>
                         </div><!-- /.section-content -->
-                        <a href="" class="read-more stick-to-bottom">All News</a>
+                        <!--<a href="" class="read-more stick-to-bottom">All News</a>-->
                     </section><!-- /.news-small -->
                 </div><!-- /.col-md-4 -->
                 <div class="col-md-4 col-sm-6">
@@ -101,42 +95,20 @@
                             <a href="" class="link-calendar">Calendar</a>
                         </header>
                         <div class="section-content">
-                            <article class="event nearest">
-                                <figure class="date">
-                                    <div class="month">jan</div>
-                                    <div class="day">18</div>
-                                </figure>
-                                <aside>
-                                    <header>
-                                        <a href="event-detail.html">Conservatory Exhibit: The garden of india a country and culture revealed</a>
-                                    </header>
-                                    <div class="additional-info">Matthaei Botanical Gardens</div>
-                                </aside>
-                            </article><!-- /article -->
-                            <article class="event nearest-second">
-                                <figure class="date">
-                                    <div class="month">feb</div>
-                                    <div class="day">01</div>
-                                </figure>
-                                <aside>
-                                    <header>
-                                        <a href="event-detail.html">February Half-Term Activities: Big Stars and Little Secrets </a>
-                                    </header>
-                                    <div class="additional-info clearfix">Pitt Rivers and Natural History Museums</div>
-                                </aside>
-                            </article><!-- /article -->
-                            <article class="event">
-                                <figure class="date">
-                                    <div class="month">mar</div>
-                                    <div class="day">23</div>
-                                </figure>
-                                <aside>
-                                    <header>
-                                        <a href="event-detail.html">The Orchestra of the Age of Enlightenment perform with Music</a>
-                                    </header>
-                                    <div class="additional-info">Faculty of Music</div>
-                                </aside>
-                            </article><!-- /article -->
+                            <?php $i = 0; foreach ($event as $e) : $i++;?>
+                            <article class="event <?= $i == 1 ? 'nearest' : ($i == 2 ? 'nearest-second' : '') ?>">
+                                    <figure class="date">
+                                        <div class="month"><?= date("M", strtotime($e['event_date'])) ?></div>
+                                        <div class="day"><?= date("d", strtotime($e['event_date'])) ?></div>
+                                    </figure>
+                                    <aside>
+                                        <header>
+                                            <a href="event-detail.html"><?= $e['event_title'] ?></a>
+                                        </header>
+                                        <div class="additional-info" style="min-height: 15px;"><?= $e['event_location'] ?></div>
+                                    </aside>
+                                </article><!-- /article -->
+                            <?php endforeach ?>
                         </div><!-- /.section-content -->
                     </section><!-- /.events-small -->
                 </div><!-- /.col-md-4 -->
@@ -146,11 +118,10 @@
                             <h2>About Universo</h2>
                         </header>
                         <div class="section-content">
-                            <img src="assets/img/students.jpg" alt="" class="add-margin">
-                            <p><strong>Welcome o Universo.</strong> Premium HTML Template for schools, universieties and other educational institutes.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet semper tincidunt.
-                                Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
-                            <a href="" class="read-more stick-to-bottom">Read More</a>
+                            <img src="/assets/img/campus/college.png" alt="" class="add-margin img-responsive">
+                            <p>The <strong>Sri Sai Institute of Technology</strong> is setup to impart quality education in the field of Diploma in Engineering (ME, ME[Automobile], Civil, Electrical) and to groom young people with knowledge and skills that would help them make meaningful contribution to commerce and society.
+                                SSIT is the congregation of knowledge and vision that provides a unique opportunity to its students to gain insights into tomorrow’s technology.</p>
+                            <a href="/about-us" class="read-more stick-to-bottom">Read More</a>
                         </div><!-- /.section-content -->
                     </section><!-- /.about -->
                 </div><!-- /.col-md-4 -->
@@ -166,24 +137,20 @@
                 <div class="author-carousel">
                     <div class="author">
                         <blockquote>
-                            <figure class="author-picture"><img src="assets/img/student-testimonial.jpg" alt=""></figure>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
-                                    <header>Morbi nec nisi ante. Quisque lacus ligula, iaculis in elit et, interdum semper quam. Fusce in interdum tortor.
-                                        Ut sollicitudin lectus dolor eget imperdiet libero pulvinar sit amet.</header>
-                                    <footer>Claire Doe</footer>
+                                    <header> Don’t let what you cannot do interfere with what you can do.</header>
+                                    <footer>John Wooden</footer>
                                 </div>
                             </article>
                         </blockquote>
                     </div><!-- /.author -->
                     <div class="author">
                         <blockquote>
-                            <figure class="author-picture"><img src="assets/img/student-testimonial.jpg" alt=""></figure>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
-                                    <header>Morbi nec nisi ante. Quisque lacus ligula, iaculis in elit et, interdum semper quam. Fusce in interdum tortor.
-                                        Ut sollicitudin lectus dolor eget imperdiet libero pulvinar sit amet.</header>
-                                    <footer>Claire Doe</footer>
+                                    <header> Failure is the opportunity to begin again more intelligently. </header>
+                                    <footer>Henry Ford</footer>
                                 </div>
                             </article>
                         </blockquote>
@@ -193,7 +160,7 @@
         </div><!-- /.block -->
     </section>
     <!-- end Testimonial -->
-
+    <?php /*
     <!-- Academic Life, Campus Life, Newsletter -->
     <div class="block">
         <div class="container">
@@ -257,9 +224,9 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div>
-    <!-- end Academic Life, Campus Life, Newsletter -->
+    <!-- end Academic Life, Campus Life, Newsletter -->*/ ?>
 
-    <!-- Divisions, Connect -->
+    <?php /* ?>  <!-- Divisions, Connect -->
     <div class="block">
         <div class="container">
             <div class="block-dark-background">
@@ -369,70 +336,25 @@
             </div><!-- /.block-dark-background -->
         </div><!-- /.container -->
     </div>
-    <!-- end Divisions, Connect -->
+    <!-- end Divisions, Connect --><?php */ ?>
 
     <!-- Our Professors, Gallery -->
     <div class="block">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-4">
-                    <section id="our-professors">
-                        <header>
-                            <h2>Our Professors</h2>
-                        </header>
-                        <div class="section-content">
-                            <div class="professors">
-                                <article class="professor-thumbnail">
-                                    <figure class="professor-image"><a href="member-detail.html"><img src="assets/img/professor.jpg" alt=""></a></figure>
-                                    <aside>
-                                        <header>
-                                            <a href="member-detail.html">Prof. Mathew Davis</a>
-                                            <div class="divider"></div>
-                                            <figure class="professor-description">Applied Science and Engineering</figure>
-                                        </header>
-                                        <a href="member-detail.html" class="show-profile">Show Profile</a>
-                                    </aside>
-                                </article><!-- /.professor-thumbnail -->
-                                <article class="professor-thumbnail">
-                                    <figure class="professor-image"><a href="member-detail.html"><img src="assets/img/professor-02.jpg" alt=""></a></figure>
-                                    <aside>
-                                        <header>
-                                            <a href="member-detail.html">Prof. Jane Stairway</a>
-                                            <div class="divider"></div>
-                                            <figure class="professor-description">Applied Science and Engineering</figure>
-                                        </header>
-                                        <a href="member-detail.html" class="show-profile">Show Profile</a>
-                                    </aside>
-                                </article><!-- /.professor-thumbnail -->
-                                <a href="" class="read-more stick-to-bottom">All Professors</a>
-                            </div><!-- /.professors -->
-                        </div><!-- /.section-content -->
-                    </section><!-- /.our-professors -->
-                </div><!-- /.col-md-4 -->
 
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-12 col-sm-12">
                     <section id="gallery">
                         <header>
                             <h2>Gallery</h2>
                         </header>
                         <div class="section-content">
                             <ul class="gallery-list">
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-01.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-02.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-03.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-04.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-05.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-06.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-07.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-08.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-09.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-10.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-11.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-12.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-13.jpg" alt=""></a></li>
-                                <li><a href="assets/img/gallery-big-image.jpg" class="image-popup"><img src="assets/img/image-14.jpg" alt=""></a></li>
+                                <?php foreach ($gallery as $img) : ?>
+                                    <li><a href="/images/gallery/full/<?= $img['gallery_name'] ?>" class="image-popup"><img src="/images/gallery/thumb/<?= $img['gallery_name'] ?>" alt=""></a></li>
+                                <?php endforeach ?>
                             </ul>
-                            <a href="" class="read-more">Go to Gallery</a>
+                            <a href="/gallery" class="read-more">Go to Gallery</a>
                         </div><!-- /.section-content -->
                     </section><!-- /.gallery -->
                 </div><!-- /.col-md-4 -->
@@ -442,7 +364,7 @@
     </div>
     <!-- end Our Professors, Gallery -->
 
-    <!-- Partners, Make a Donation -->
+    <?php /* ?><!-- Partners, Make a Donation -->
     <div class="block">
         <div class="container">
             <div class="row">
@@ -478,5 +400,5 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div>
-    <!-- end Partners, Make a Donation -->
+    <!-- end Partners, Make a Donation --><?php */ ?>
 </div>

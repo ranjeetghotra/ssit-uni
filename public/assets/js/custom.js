@@ -167,7 +167,7 @@ $(document).ready(function($) {
     });
 
 //  Slider Subscription Form
-
+/*
     $("#slider-submit").bind("click", function(event){
         $("#slider-form").validate({
             submitHandler: function() {
@@ -178,11 +178,11 @@ $(document).ready(function($) {
                 return false;
             }
         });
-    });
+    });*/
 
 //  Contact Form with validation
 
-    $("#submit").bind("click", function(event){
+/*    $("#submit").bind("click", function(event){
         $("#contactform").validate({
             submitHandler: function() {
                 $.post("contact.php", $("#contactform").serialize(),  function(response) {
@@ -192,11 +192,11 @@ $(document).ready(function($) {
                 return false;
             }
         });
-    });
+    });*/
 
 //  Landing Page Form
 
-    $("#landing-page-submit").bind("click", function(event){
+  /*  $("#landing-page-submit").bind("click", function(event){
         $("#form-landing-page").validate({
             submitHandler: function() {
                 $.post("landing-page-form.php", $("#form-landing-page").serialize(),  function(response) {
@@ -206,7 +206,7 @@ $(document).ready(function($) {
                 return false;
             }
         });
-    });
+    });*/
 
 //  Vanilla Box
 

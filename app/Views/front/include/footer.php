@@ -1,4 +1,5 @@
 <footer id="page-footer">
+    <?php /* ?>
     <section id="footer-top">
         <div class="container">
             <div class="footer-inner">
@@ -21,14 +22,14 @@
                 </div><!-- /.pull-right -->
             </div><!-- /.footer-inner -->
         </div><!-- /.container -->
-    </section><!-- /#footer-top -->
+    </section><!-- /#footer-top --><?php */ ?>
 
     <section id="footer-content">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-12">
                     <aside class="logo">
-                        <img src="assets/img/logo-white.png" class="vertical-center">
+                        <img src="/images/logo/logo-ssit-light.png" class="vertical-center" style="width: 85%;">
                     </aside>
                 </div><!-- /.col-md-3 -->
                 <div class="col-md-3 col-sm-4">
@@ -37,15 +38,15 @@
                             <h4>Contact Us</h4>
                         </header>
                         <address>
-                            <strong>University of Universo</strong>
+                            <strong>Sri Sai Institute of Technology</strong>
                             <br>
-                            <span>4877 Spruce Drive</span>
+                            <span>Mahua Dabra, Jaspur, Udham Singh Nagar,</span>
                             <br><br>
-                            <span>West Newton, PA 15089</span>
+                            <span>Uttarakhand (India)</span>
                             <br>
-                            <abbr title="Telephone">Telephone:</abbr> +1 (734) 123-4567
+                            <abbr title="Telephone">Telephone:</abbr> 05947-222088
                             <br>
-                            <abbr title="Email">Email:</abbr> <a href="#">questions@youruniversity.com</a>
+                            <abbr title="Email">Email:</abbr> <a href="#">info@srisaiiot.com</a>
                         </address>
                     </aside>
                 </div><!-- /.col-md-3 -->
@@ -55,12 +56,11 @@
                             <h4>Important Links</h4>
                         </header>
                         <ul class="list-links">
-                            <li><a href="#">Future Students</a></li>
-                            <li><a href="#">Alumni</a></li>
-                            <li><a href="#">Give a Donation</a></li>
-                            <li><a href="#">Professors</a></li>
-                            <li><a href="#">Libary & Health</a></li>
-                            <li><a href="#">Research</a></li>
+                            <li><a href="/press-release">Press Release</a></li>
+                            <li><a href="/vision-mission">Vision & Mission</a></li>
+                            <li><a href="/gallery">Gallery</a></li>
+                            <li><a href="/about-us">About us</a></li>
+                            <li><a href="/contact-us">Contact us</a></li>
                         </ul>
                     </aside>
                 </div><!-- /.col-md-3 -->
@@ -76,7 +76,7 @@
                             society.
                         </p>
                         <div>
-                            <a href="" class="read-more">All News</a>
+                            <a href="/about-us" class="read-more">Read More</a>
                         </div>
                     </aside>
                 </div><!-- /.col-md-3 -->

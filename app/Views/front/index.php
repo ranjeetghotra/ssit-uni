@@ -5,23 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Theme Starz">
+    <meta name="author" content="Ranjeet Ghotra">
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/selectize.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/vanillabox/vanillabox.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/vanillabox/vanillabox.css" type="text/css">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/vanillabox/vanillabox.css" type="text/css">
+    <link rel="icon" type="image/png" href="/images/logo/favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
 
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-
-    <title>Universo - Educational, Course and University Template</title>
+    <title><?= isset($title) ? $title . ' | ' : '' ?>Sri Sai Institute of Technology</title>
+    <style>
+        .breadcrumb {
+            margin-bottom: 2rem;
+        }
+    </style>
 
 </head>
 
-<body class="<?=$page=='home'?"page-homepage-carousel":"page-sub-page page-contact"?>">
+<body class="<?= $page == 'home' ? "page-homepage-carousel" : "page-sub-page page-contact" ?>">
     <!-- Wrapper -->
     <div class="wrapper">
         <!-- Header -->
@@ -29,7 +34,7 @@
         <!-- end Header -->
 
         <!-- Page Content -->
-        <?php include($page.'.php') ?>
+        <?php include($page . '.php') ?>
         <!-- end Page Content -->
 
         <!-- Footer -->
@@ -52,6 +57,8 @@
     <script type="text/javascript" src="assetss/js/retina-1.1.0.min.js"></script>
 
     <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script src="/assets/js/ajax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 
 </body>
 
