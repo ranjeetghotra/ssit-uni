@@ -33,8 +33,7 @@ $sideNews = $db->table('news')->orderBy('news_id', 'desc')->limit(3)->get()->get
                             </div><!-- /input-group -->
                         </form>
                     </div><!-- /.newsletter -->
-                    <p class="opacity-50">Ut tincidunt, quam in tincidunt vestibulum, turpis ipsum porttitor nisi, et fermentum augue
-                        lit eu neque. In at tempor dolor, sit amet dictum lacus. Praesent porta orci eget laoreet ultrices.
+                    <p class="opacity-50">
                     </p>
                 </div><!-- /.section-content -->
             </header>

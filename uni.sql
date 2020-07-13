@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2020 at 07:51 PM
+-- Generation Time: Jul 13, 2020 at 07:44 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -57,13 +57,6 @@ CREATE TABLE `admission` (
   `admission_created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `admission`
---
-
-INSERT INTO `admission` (`admission_id`, `admission_name`, `admission_phone`, `admission_level`, `admission_course`, `admission_created_at`) VALUES
-(2, 'R d', '9781838309', 'Beginner', 'Art and Design', '2020-07-12 16:58:18');
-
 -- --------------------------------------------------------
 
 --
@@ -80,12 +73,30 @@ CREATE TABLE `contact` (
   `contact_created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `contact`
+-- Table structure for table `event`
 --
 
-INSERT INTO `contact` (`contact_id`, `contact_name`, `contact_email`, `contact_phone`, `contact_subject`, `contact_message`, `contact_created_at`) VALUES
-(4, 'gdfgdfgdfgdf', 'ranjeetghotra6@gmail.com', '9781838309', 'fgdfgdg', 'dfgfgfg', '2020-07-12 16:54:51');
+CREATE TABLE `event` (
+  `event_id` int(11) NOT NULL,
+  `event_title` text NOT NULL,
+  `event_location` varchar(100) NOT NULL,
+  `event_date` date NOT NULL,
+  `event_created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`event_id`, `event_title`, `event_location`, `event_date`, `event_created_at`) VALUES
+(2, 'gdhdfh', '', '2000-02-02', '2020-07-13 05:09:11'),
+(3, 'two', '', '2020-12-07', '2020-07-13 05:09:31'),
+(4, 'three', '', '2020-07-12', '2020-07-13 05:10:23'),
+(5, 'four', '', '2020-07-14', '2020-07-13 05:10:44'),
+(6, 'todafdf', '', '2020-07-13', '2020-07-13 05:39:48');
 
 -- --------------------------------------------------------
 
@@ -98,15 +109,6 @@ CREATE TABLE `gallery` (
   `gallery_name` text NOT NULL,
   `gallery_created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `gallery`
---
-
-INSERT INTO `gallery` (`gallery_id`, `gallery_name`, `gallery_created_at`) VALUES
-(9, '1594552362_19b336b73c58cb39568b.jpg', '2020-07-12 11:12:44'),
-(10, '1594552364_eeee5287dae28b1dd880.jpg', '2020-07-12 11:12:45'),
-(11, '1594552365_8a363b580d04507157c5.png', '2020-07-12 11:12:45');
 
 -- --------------------------------------------------------
 
@@ -205,6 +207,12 @@ ALTER TABLE `contact`
   ADD PRIMARY KEY (`contact_id`);
 
 --
+-- Indexes for table `event`
+--
+ALTER TABLE `event`
+  ADD PRIMARY KEY (`event_id`);
+
+--
 -- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
@@ -257,6 +265,12 @@ ALTER TABLE `contact`
   MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `event`
+--
+ALTER TABLE `event`
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
@@ -266,7 +280,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `newsletter`

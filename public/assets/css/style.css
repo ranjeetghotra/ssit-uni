@@ -1031,11 +1031,11 @@ ul.list-links a:hover {
   width: 70px;
 }
 .events .event .date .day {
-  bottom: 15px;
-  font-size: 60px;
+  bottom: 16px;
+  font-size: 58px;
   font-weight: bold;
   position: relative;
-  right: -12px;
+  right: -8px;
 }
 .events .event .date .month {
   font-size: 14px;

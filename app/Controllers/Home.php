@@ -7,6 +7,7 @@ class Home extends BaseController
 	public function index()
 	{
 		$page_data['news'] = $this->db->table('news')->orderBy('news_id', 'desc')->limit(3)->get()->getResult('array');
+		$page_data['event'] = $this->db->table('event')->where('event_date >= CURDATE()')->orderBy('event_date', 'asc')->limit(3)->get()->getResult('array');
 		$page_data['images'] = $this->db->table('slider')->orderBy('slider_id', 'desc')->get()->getResult('array');
 		$page_data['gallery'] = $this->db->table('gallery')->orderBy('gallery_id', 'desc')->limit(14)->get()->getResult('array');
 		$page_data['page'] = "home";

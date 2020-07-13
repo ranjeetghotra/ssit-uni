@@ -35,6 +35,12 @@
                             <span class="nav-link-text">News</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $page == "event" ? "active" : "" ?>" href="/manage/event">
+                            <i class="ni ni-single-copy-04 text-black"></i>
+                            <span class="nav-link-text">Events</span>
+                        </a>
+                    </li>
                     <li class="nav-item <?= $page == "slider" ? "active" : "" ?>">
                         <a class="nav-link" href="/manage/slider">
                             <i class="ni ni-planet text-orange"></i>

@@ -85,7 +85,7 @@
                                 </article><!-- /article -->
                             <?php endforeach ?>
                         </div><!-- /.section-content -->
-                        <a href="" class="read-more stick-to-bottom">All News</a>
+                        <!--<a href="" class="read-more stick-to-bottom">All News</a>-->
                     </section><!-- /.news-small -->
                 </div><!-- /.col-md-4 -->
                 <div class="col-md-4 col-sm-6">
@@ -95,42 +95,20 @@
                             <a href="" class="link-calendar">Calendar</a>
                         </header>
                         <div class="section-content">
-                            <article class="event nearest">
-                                <figure class="date">
-                                    <div class="month">jan</div>
-                                    <div class="day">18</div>
-                                </figure>
-                                <aside>
-                                    <header>
-                                        <a href="event-detail.html">Conservatory Exhibit: The garden of india a country and culture revealed</a>
-                                    </header>
-                                    <div class="additional-info">Matthaei Botanical Gardens</div>
-                                </aside>
-                            </article><!-- /article -->
-                            <article class="event nearest-second">
-                                <figure class="date">
-                                    <div class="month">feb</div>
-                                    <div class="day">01</div>
-                                </figure>
-                                <aside>
-                                    <header>
-                                        <a href="event-detail.html">February Half-Term Activities: Big Stars and Little Secrets </a>
-                                    </header>
-                                    <div class="additional-info clearfix">Pitt Rivers and Natural History Museums</div>
-                                </aside>
-                            </article><!-- /article -->
-                            <article class="event">
-                                <figure class="date">
-                                    <div class="month">mar</div>
-                                    <div class="day">23</div>
-                                </figure>
-                                <aside>
-                                    <header>
-                                        <a href="event-detail.html">The Orchestra of the Age of Enlightenment perform with Music</a>
-                                    </header>
-                                    <div class="additional-info">Faculty of Music</div>
-                                </aside>
-                            </article><!-- /article -->
+                            <?php $i = 0; foreach ($event as $e) : $i++;?>
+                            <article class="event <?= $i == 1 ? 'nearest' : ($i == 2 ? 'nearest-second' : '') ?>">
+                                    <figure class="date">
+                                        <div class="month"><?= date("M", strtotime($e['event_date'])) ?></div>
+                                        <div class="day"><?= date("d", strtotime($e['event_date'])) ?></div>
+                                    </figure>
+                                    <aside>
+                                        <header>
+                                            <a href="event-detail.html"><?= $e['event_title'] ?></a>
+                                        </header>
+                                        <div class="additional-info" style="min-height: 15px;"><?= $e['event_location'] ?></div>
+                                    </aside>
+                                </article><!-- /article -->
+                            <?php endforeach ?>
                         </div><!-- /.section-content -->
                     </section><!-- /.events-small -->
                 </div><!-- /.col-md-4 -->
