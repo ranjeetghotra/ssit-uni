@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-12">
                     <aside class="logo">
-                        <img src="/images/logo/logo-ssit-light.png" class="vertical-center" style="width: 85%;">
+                        <img src="/images/logo/logo.jpg" class="vertical-center" style="width: 85%;">
                     </aside>
                 </div><!-- /.col-md-3 -->
                 <div class="col-md-3 col-sm-4">
@@ -40,13 +40,16 @@
                         <address>
                             <strong>Sri Sai Institute of Technology</strong>
                             <br>
-                            <span>Mahua Dabra, Jaspur, Udham Singh Nagar,</span>
-                            <br><br>
+                            <span>Udham Singh Nagar, </span>
+                            <br>
+                            <span>Mahua Dabra, Jaspur</span>
+                            <br>
                             <span>Uttarakhand (India)</span>
                             <br>
-                            <abbr title="Telephone">Telephone:</abbr> 05947-222088
                             <br>
-                            <abbr title="Email">Email:</abbr> <a href="#">info@srisaiiot.com</a>
+                            <p><abbr title="Telephone">Telephone:</abbr> +91 8445385546</p>
+                            <br>
+                            <p><abbr title="Email">Email:</abbr> <a href="#">info@srisaiiot.com</a></p>
                         </address>
                     </aside>
                 </div><!-- /.col-md-3 -->
@@ -70,10 +73,7 @@
                             <h4>Sri Sai Institute of Technology</h4>
                         </header>
                         <p>
-                            The Sri Sai Institute of Technology is setup to impart quality education in the field of
-                            Diploma in Engineering (ME, ME[Automobile], Civil, Electrical) and to groom young people
-                            with knowledge and skills that would help them make meaningful contribution to commerce and
-                            society.
+                            Sri Sai Institute of Technology is setup to impart quality education in the field of Diploma in Engineering like Mechanical Civil, Electrical Engineering and to groom young people with knowledge and skills.
                         </p>
                         <div>
                             <a href="/about-us" class="read-more">Read More</a>
@@ -88,7 +88,7 @@
     <section id="footer-bottom">
         <div class="container">
             <div class="footer-inner">
-                <div class="copyright">© Sri Sai Institute of Technology 2020</div><!-- /.copyright -->
+                <div class="copyright">Copyright ©  2020 <b><a href="https://srisaiiot.com/">Sri Sai Institute of Technology</a></b> Developed by <b><a href="https://wwww.bevisible.online">Bevisible</a></b></div><!-- /.copyright -->
             </div><!-- /.footer-inner -->
         </div><!-- /.container -->
     </section><!-- /#footer-bottom -->

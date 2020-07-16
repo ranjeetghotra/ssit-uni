@@ -63,7 +63,15 @@
                                 <li><a href="/vision-mission">Vision & Mission</a></li>
                                 <li><a href="/chairman-message">Chairman's Message</a></li>
                                 <li><a href="/principal-message">Principal's Message</a></li>
+                                <li><a href="/pdf/AICTE_APPROVAL_2019-20.pdf">AICTE APPROVAL 2019-2020</a></li>
+                                <li><a href="/pdf/AICTE_APPROVAL_2019-20.pdf">AICTE APPROVAL 2018-2019</a></li>
+                                <li><a href="/pdf/AICTE_APPROVAL_2019-20.pdf">AICTE APPROVAL 2017-2018</a></li>
+                                <li><a href="/pdf/AICTE_APPROVAL_2019-20.pdf">AICTE APPROVAL 2016-2017</a></li>
+                                <li><a href="/pdf/AICTE_APPROVAL_2019-20.pdf">AICTE APPROVAL 2015-2016</a></li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href="/Why-SSIT">Why SSIT</a>
                         </li>
                         <li>
                             <a href="/press-release">Press Release</a>

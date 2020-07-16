@@ -15,7 +15,7 @@
                         <div class="slider-content">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h1>Join the comunity of modern thinking students</h1>
+                                    <h1>Admission Form - Join the comunity of modern thinking students</h1>
                                     <form class="ajax-form" role="form" action="/home/form/admission" method="post">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -25,30 +25,33 @@
                                             </div><!-- /.col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <input class="form-control has-dark-background" name="phone" id="slider-email" placeholder="Phone" type="tel" required="">
+                                                    <input class="form-control has-dark-background" name="phone" id="slider-email" placeholder="Contact No." type="tel" required="">
                                                 </div>
                                             </div><!-- /.col-md-6 -->
                                         </div><!-- /.row -->
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <select name="level" id="slider-study-level" class="has-dark-background">
-                                                        <option value="- Not selected -">Study Level</option>
-                                                        <option value="Beginner">Beginner</option>
-                                                        <option value="Advanced">Advanced</option>
-                                                        <option value="Intermediate">Intermediate</option>
-                                                        <option value="Professional">Professional</option>
-                                                    </select>
-                                                </div><!-- /.form-group -->
+                                                    <input class="form-control has-dark-background" name="name" id="slider-name" placeholder="E-mail ID" type="text" required="">
+                                                </div>
                                             </div><!-- /.col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input class="form-control has-dark-background" name="phone" id="slider-email" placeholder="City" type="text" required="">
+                                                </div>
+                                            </div><!-- /.col-md-6 -->
+                                        </div><!-- /.row -->
+                                        <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-group">
                                                     <select name="course" id="slider-course" class="has-dark-background">
                                                         <option value="- Not selected -">Courses</option>
-                                                        <option value="Art and Design">Art and Design</option>
-                                                        <option value="Marketing">Marketing</option>
-                                                        <option value="Science">Science</option>
-                                                        <option value="History and Psychology"></option>
+                                                        <option value="Diploma In Engineering – Regular (Mechanical Engineering)">Diploma In Engineering – Regular (Mechanical Engineering)</option>
+                                                        <option value="Diploma In Engineering – Regular (Civil Engineering)">Diploma In Engineering – Regular (Civil Engineering)</option>
+                                                        <option value="Diploma In Engineering – Regular (Electrical Engineering)">Diploma In Engineering – Regular (Electrical Engineering)</option>
+                                                        <option value="Diploma In Engineering – Lateral (Mechanical Engineering)">Diploma In Engineering – Lateral (Mechanical Engineering)</option>
+                                                        <option value="Diploma In Engineering – Lateral (Civil Engineering)">Diploma In Engineering – Lateral (Civil Engineering)</option>
+                                                        <option value="Diploma In Engineering – Lateral (Electrical Engineering)">Diploma In Engineering – Lateral (Electrical Engineering)</option>
                                                     </select>
                                                 </div><!-- /.form-group -->
                                             </div><!-- /.col-md-6 -->
@@ -115,7 +118,7 @@
                 <div class="col-md-4 col-sm-12">
                     <section id="about">
                         <header>
-                            <h2>About Universo</h2>
+                            <h2>About Sri Sai Institute Of Technology</h2>
                         </header>
                         <div class="section-content">
                             <img src="/assets/img/campus/college.png" alt="" class="add-margin img-responsive">

@@ -20,20 +20,13 @@
                         </header>
                         <img class="img-responsive" src="/assets/img/campus/college.png">
                         <h2>Mission & Purpose</h2>
-                        <p>The <strong>Sri Sai Institute of Technology</strong> is setup to impart quality education in
-                            the field of Diploma in Engineering (ME, ME[Automobile], Civil, Electrical) and to groom
-                            young people with knowledge and skills that would help them make meaningful contribution to
-                            commerce and society. SSIT is the congregation of knowledge and vision that provides a
-                            unique opportunity to its students to gain insights into tomorrow’s technology. SSIT is an
-                            institute synonymous to holistic approach where we strive to reach out, educate, mentor
-                            &amp; guide all those who choose their career in the field of technical education.</p>
+                        <p>The <strong>Sri Sai Institute of Technology</strong> is setup to impart quality education in the field of Diploma in Engineering like Mechanical Civil, Electrical Engineering and to groom young people with knowledge and skills.</p>
+                        <p>SSIT is the congregation of knowledge and vision that provides a unique opportunity for students to gain insights into tomorrow’s technology. SSIT is an institute synonymous to holistic approach where we strive to reach out, educate, mentor and guide all those who choose their career in the field of technical education.</p>
+                        <p>We  follows a holistic approach which transformed the students into new generation citizens with vision, a deep sense of moral and ethical values and social responsibilities.</p>
+                        <p><b>Sri Sai Institute of Technology</b> since inception has always believed in overall development of students and educating them holistically rather than just making them literate in the area of engineering.</p>
                         <h2>Bold History that Fuels the Future</h2>
-                        <p>In a short span of time since 2015, the year of its establishment, SSIT has achieved new
-                            heights Reckoning with achievements SSIT is now the most coveted educational destination for
-                            the young engineering aspirants. Adding a feather to its cap SSIT has grabbed the coveted –
-                            <strong>“Best Campus in Rural Area Award”</strong>, <strong>“Best Institute for Promoting
-                                Industry Academic Interface in Engineering Award”</strong> and many more by leading
-                            organization of India.</p>
+                        <p>Since 2015, In a short span of time, SSIT has achieved new heights with achievements. SSIT is now the most coveted educational destination for the young engineering aspirants.</p>
+                        <p><b>Sri Sai Group Of Institutions </b> conferred with <b>“Best Campus in Rural Area Award”</b> and <b>“Best Institute for Promoting Industry Academic Interface in Education Excellence”</b></p>
                     </section>
                 </div><!-- /#page-main -->
             </div><!-- /.col-md-8 -->
