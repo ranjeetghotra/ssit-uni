@@ -39,6 +39,10 @@ $routes->add('vision-mission', 'Home::page/vision/Vision & Mission');
 $routes->add('chairman-message', 'Home::page/chairman-message/Chairman Message');
 $routes->add('principal-message', 'Home::page/principal-message/Principal Message');
 
+$routes->add('ssit-advantages', 'Home::page/ssit-advantages/SSIT Adventages');
+$routes->add('placement-record', 'Home::page/placement-record/Placement Record');
+$routes->add('personality-development', 'Home::page/personality-development/Personality Traits to Develop');
+
 
 $routes->add('auth/admin', 'Manage::login');
 $routes->add('auth/admin/submit', 'Manage::login/submit');

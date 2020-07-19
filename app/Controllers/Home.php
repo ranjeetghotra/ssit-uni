@@ -38,7 +38,8 @@ class Home extends BaseController
 		} elseif ($para1 == 'admission') {
 			$data['admission_name'] = $this->request->getPost('name');
 			$data['admission_phone'] = $this->request->getPost('phone');
-			$data['admission_level'] = $this->request->getPost('level');
+			$data['admission_email'] = $this->request->getPost('email');
+			$data['admission_city'] = $this->request->getPost('city');
 			$data['admission_course'] = $this->request->getPost('course');
 			$data['admission_created_at'] = date('Y-m-d H:i:s');
 			$this->db->table('admission')->insert($data);

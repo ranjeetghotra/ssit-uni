@@ -71,7 +71,12 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/Why-SSIT">Why SSIT</a>
+                            <a class="has-child no-link">Why SSIT</a>
+                            <ul class="list-unstyled child-navigation">
+                                <li><a href="/ssit-advantages">SSIT Advantages</a></li>
+                                <li><a href="/placement-record">Placement Record</a></li>
+                                <li><a href="/personality-development">Personality Development</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="/press-release">Press Release</a>

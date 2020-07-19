@@ -151,7 +151,7 @@ class Manage extends BaseController
 				$p[] = ++$i;
 				$p[] = $item['admission_name'];
 				$p[] = $item['admission_phone'];
-				$p[] = $item['admission_level'];
+				$p[] = $item['admission_city'];
 				$p[] = $item['admission_course'];
 				$p[] = '<div class="dropdown show"><a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</a>'
 					. '<div class="dropdown-menu" style="min-width:inherit" aria-labelledby="dropdownMenuLink">'

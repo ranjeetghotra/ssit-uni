@@ -1,3 +1,8 @@
+<style>
+    .events.images .event .event-thumbnail .event-image .image-wrapper img {
+        height: 165px;
+    }
+</style>
 <div id="page-content">
     <!-- Slider -->
     <div id="homepage-carousel">
@@ -7,7 +12,7 @@
                     <div class="col-md-6 col-sm-7">
                         <div class="image-carousel">
                             <?php foreach ($images as $img) : ?>
-                                <div class="image-carousel-slide"><img src="/images/slider/full/<?= $img['slider_name'] ?>" alt=""></div>
+                                <div class="image-carousel-slide"><img style="height: 320px; width: 100%; object-fit: cover;" src="/images/slider/full/<?= $img['slider_name'] ?>" alt=""></div>
                             <?php endforeach ?>
                         </div><!-- /.slider-image -->
                     </div><!-- /.col-md-6 -->
@@ -32,12 +37,12 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <input class="form-control has-dark-background" name="name" id="slider-name" placeholder="E-mail ID" type="text" required="">
+                                                    <input class="form-control has-dark-background" name="email" id="slider-name" placeholder="E-mail ID" type="text">
                                                 </div>
                                             </div><!-- /.col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <input class="form-control has-dark-background" name="phone" id="slider-email" placeholder="City" type="text" required="">
+                                                    <input class="form-control has-dark-background" name="city" id="slider-email" placeholder="City" type="text" required="">
                                                 </div>
                                             </div><!-- /.col-md-6 -->
                                         </div><!-- /.row -->
@@ -55,9 +60,11 @@
                                                     </select>
                                                 </div><!-- /.form-group -->
                                             </div><!-- /.col-md-6 -->
+                                            <div class="col-md-6">
+                                                <button type="submit" id="slider-submit" class="btn btn-framed pull-right">Submit</button>
+                                                <div id="form-status"></div>
+                                            </div>
                                         </div><!-- /.row -->
-                                        <button type="submit" id="slider-submit" class="btn btn-framed pull-right">Submit</button>
-                                        <div id="form-status"></div>
                                     </form>
                                 </div><!-- /.col-md-12 -->
                             </div><!-- /.row -->
@@ -98,8 +105,9 @@
                             <a href="" class="link-calendar">Calendar</a>
                         </header>
                         <div class="section-content">
-                            <?php $i = 0; foreach ($event as $e) : $i++;?>
-                            <article class="event <?= $i == 1 ? 'nearest' : ($i == 2 ? 'nearest-second' : '') ?>">
+                            <?php $i = 0;
+                            foreach ($event as $e) : $i++; ?>
+                                <article class="event <?= $i == 1 ? 'nearest' : ($i == 2 ? 'nearest-second' : '') ?>">
                                     <figure class="date">
                                         <div class="month"><?= date("M", strtotime($e['event_date'])) ?></div>
                                         <div class="day"><?= date("d", strtotime($e['event_date'])) ?></div>
@@ -124,7 +132,7 @@
                             <img src="/assets/img/campus/college.png" alt="" class="add-margin img-responsive">
                             <p>The <strong>Sri Sai Institute of Technology</strong> is setup to impart quality education in the field of Diploma in Engineering (ME, ME[Automobile], Civil, Electrical) and to groom young people with knowledge and skills that would help them make meaningful contribution to commerce and society.
                                 SSIT is the congregation of knowledge and vision that provides a unique opportunity to its students to gain insights into tomorrow’s technology.</p>
-                            <a href="/about-us" class="read-more stick-to-bottom">Read More</a>
+                            <br><a href="/about-us" class="read-more stick-to-bottom">Read More</a>
                         </div><!-- /.section-content -->
                     </section><!-- /.about -->
                 </div><!-- /.col-md-4 -->
@@ -132,7 +140,82 @@
         </div><!-- /.container -->
     </div>
     <!-- end News, Events, About -->
-
+    <div class="container">
+        <section class="events images row">
+            <article class="event col-md-6">
+                <div class="event-thumbnail">
+                    <figure class="event-image">
+                        <div class="image-wrapper"><img src="/assets/img/course/civil.jpg"></div>
+                    </figure>
+                </div>
+                <aside>
+                    <header>
+                        <a href="">Diploma in Civil Engineering</a>
+                    </header>
+                    <div class="additional-info">
+                        <a>1 Year</a>
+                    </div>
+                    <div class="description">
+                    </div>
+                    <a href="" class="btn btn-framed btn-color-grey btn-small">View Details</a>
+                </aside>
+            </article>
+            <article class="event col-md-6">
+                <div class="event-thumbnail">
+                    <figure class="event-image">
+                        <div class="image-wrapper"><img src="/assets/img/course/electrical.jpg"></div>
+                    </figure>
+                </div>
+                <aside>
+                    <header>
+                        <a href="">Diploma in Electrical Engineering</a>
+                    </header>
+                    <div class="additional-info">
+                        <a>1 Year</a>
+                    </div>
+                    <div class="description">
+                    </div>
+                    <a href="" class="btn btn-framed btn-color-grey btn-small">View Details</a>
+                </aside>
+            </article>
+            <article class="event col-md-6">
+                <div class="event-thumbnail">
+                    <figure class="event-image">
+                        <div class="image-wrapper"><img src="/assets/img/course/mechanical.jpg"></div>
+                    </figure>
+                </div>
+                <aside>
+                    <header>
+                        <a href="">Diploma in Mechanical Engineering</a>
+                    </header>
+                    <div class="additional-info">
+                        <a>1 Year</a>
+                    </div>
+                    <div class="description">
+                    </div>
+                    <a href="" class="btn btn-framed btn-color-grey btn-small">View Details</a>
+                </aside>
+            </article>
+            <article class="event col-md-6">
+                <div class="event-thumbnail">
+                    <figure class="event-image">
+                        <div class="image-wrapper"><img src="/assets/img/course/automobile.jpg"></div>
+                    </figure>
+                </div>
+                <aside>
+                    <header>
+                        <a href="">Diploma in Automobile Engineering</a>
+                    </header>
+                    <div class="additional-info">
+                        <a>1 Year</a>
+                    </div>
+                    <div class="description">
+                    </div>
+                    <a href="" class="btn btn-framed btn-color-grey btn-small">View Details</a>
+                </aside>
+            </article>
+        </section>
+    </div>
     <!-- Testimonial -->
     <section id="testimonials">
         <div class="block">

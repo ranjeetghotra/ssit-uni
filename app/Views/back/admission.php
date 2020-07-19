@@ -28,7 +28,7 @@
                                 <th scope="col" class="sort" data-sort="name">No</th>
                                 <th scope="col" class="sort" data-sort="budget">Name</th>
                                 <th scope="col" class="sort" data-sort="status">Phone</th>
-                                <th scope="col">Level</th>
+                                <th scope="col">City</th>
                                 <th scope="col">Course</th>
                                 <th scope="col"></th>
                             </tr>
