@@ -88,7 +88,7 @@
     <section id="footer-bottom">
         <div class="container">
             <div class="footer-inner">
-                <div class="copyright">Copyright ©  2020 <b><a href="https://srisaiiot.com/">Sri Sai Institute of Technology</a></b> Developed by <b><a href="https://wwww.bevisible.online">Bevisible</a></b></div><!-- /.copyright -->
+                <div class="copyright">Copyright ©  2020 <b><a href="https://srisaiiot.com/">Sri Sai Institute of Technology</a></b> Developed by <b><a href="https://www.bevisible.online">Bevisible</a></b></div><!-- /.copyright -->
             </div><!-- /.footer-inner -->
         </div><!-- /.container -->
     </section><!-- /#footer-bottom -->
