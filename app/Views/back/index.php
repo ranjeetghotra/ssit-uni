@@ -41,6 +41,9 @@
       top: 10px;
       right: 25px;
     }
+    .dropdown-item {
+      cursor: pointer;
+    }
   </style>
 </head>
 

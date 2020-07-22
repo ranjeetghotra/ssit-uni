@@ -73,8 +73,12 @@ class Manage extends BaseController
 			$image = $this->db->table('gallery')->getWhere(['gallery_id' => $para2])->getRow()->gallery_name;
 			$this->db->table('gallery')->where(['gallery_id' => $para2])->delete();
 			if ($image) {
-				unlink('images/gallery/full/' . $image);
-				unlink('images/gallery/thumb/' . $image);
+				if (file_exists('images/gallery/full/' . $image)) {
+					unlink('images/gallery/full/' . $image);
+				}
+				if (file_exists('images/gallery/thumb/' . $image)) {
+					unlink('images/gallery/thumb/' . $image);
+				}
 			}
 		} else {
 			$page_data['page'] = 'gallery';
@@ -104,8 +108,12 @@ class Manage extends BaseController
 			$image = $this->db->table('press')->getWhere(['press_id' => $para2])->getRow()->press_name;
 			$this->db->table('press')->where(['press_id' => $para2])->delete();
 			if ($image) {
-				unlink('images/press/full/' . $image);
-				unlink('images/press/thumb/' . $image);
+				if(file_exists('images/press/full/' . $image)){
+					unlink('images/press/full/' . $image);
+				}
+				if(file_exists('images/press/thumb/' . $image)){
+					unlink('images/press/thumb/' . $image);
+				};
 			}
 		} else {
 			$page_data['page'] = 'press';
@@ -124,9 +132,7 @@ class Manage extends BaseController
 	}
 	public function admission($para1 = '', $para2 = '')
 	{
-		if ($para1 == "message") {
-			return $this->db->table('admission')->getWhere(['admission_id' => $para2])->getRow()->contact_message;
-		} elseif ($para1 == "delete") {
+		if ($para1 == "delete") {
 			$this->db->table('admission')->where(['admission_id' => $para2])->delete();
 		} elseif ($para1 == "list_data") {
 			// $contact = $this->db->table('contact')->orderBy('contact_id', 'desc')->get()->getResult('array');
@@ -172,7 +178,9 @@ class Manage extends BaseController
 	}
 	public function contact($para1 = '', $para2 = '')
 	{
-		if ($para1 == "delete") {
+		if ($para1 == "message") {
+			return $this->db->table('contact')->getWhere(['contact_id' => $para2])->getRow()->contact_message;
+		} elseif ($para1 == "delete") {
 			$this->db->table('contact')->where(['contact_id' => $para2])->delete();
 		} elseif ($para1 == "list_data") {
 			// $contact = $this->db->table('contact')->orderBy('contact_id', 'desc')->get()->getResult('array');
@@ -201,7 +209,7 @@ class Manage extends BaseController
 				$p[] = $item['contact_subject'];
 				$p[] = '<div class="dropdown show"><a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</a>'
 					. '<div class="dropdown-menu" style="min-width:inherit" aria-labelledby="dropdownMenuLink">'
-					. '<li data-toggle="modal" data-target="#viewModal" data-id="' . $item['contact_id'] . '" data-subject="' . $item['contact_subject'] . '" class="dropdown-item item-view"><i class="fas fa-eye fa-sm mr-2"></i>Edit</li>'
+					. '<li data-toggle="modal" data-target="#viewModal" data-id="' . $item['contact_id'] . '" data-subject="' . $item['contact_subject'] . '" class="dropdown-item item-view"><i class="fas fa-eye fa-sm mr-2"></i>View</li>'
 					. '<li data-id="' . $item['contact_id'] . '" class="dropdown-item text-white bg-danger item-delete"><i class="fas fa-trash fa-sm mr-2"></i>Delete</li>'
 					. '</div></div>';
 				$data[] = $p;
@@ -365,8 +373,12 @@ class Manage extends BaseController
 			$image = $this->db->table('slider')->getWhere(['slider_id' => $para2])->getRow()->slider_name;
 			$this->db->table('slider')->where(['slider_id' => $para2])->delete();
 			if ($image) {
-				unlink('images/slider/full/' . $image);
-				unlink('images/slider/thumb/' . $image);
+				if(file_exists('images/slider/full/' . $image)){
+					unlink('images/slider/full/' . $image);
+				}
+				if(file_exists('images/slider/thumb/' . $image)){
+					unlink('images/slider/thumb/' . $image);
+				}
 			}
 		} else {
 			$page_data['page'] = 'slider';
