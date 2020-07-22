@@ -42,21 +42,20 @@
     <!-- Footer -->
     <?php include('partial/footer.php') ?>
 </div>
-<form action="/manage/news/new" class="ajax-form" data-type="table">
+<form action="/manage/news/new" class="ajax-form" id="form-news" data-type="table">
     <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-        <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+        <div class="modal-dialog modal- modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body p-0">
                     <div class="card bg-secondary border-0 mb-0">
                         <div class="card-body px-lg-5 py-lg-5">
-                            <div class="text-center text-muted mb-4">
-                                <small>Enter News or Notification</small>
-                            </div>
                                 <div class="form-group mb-3">
                                         <textarea class="form-control form-control-alternative" placeholder="Notification" name="news"></textarea>
                                 </div>
+                                <textarea name="detail" id="quill-content" style="display:none" cols="0" rows="0"></textarea>
+                                <div class="quill-editor"></div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary my-4 modal-dismiss">Submit</button>
+                                    <button type="button" onclick="submitForm()" class="btn btn-primary my-4 modal-dismiss">Submit</button>
                                     <button type="button" class="btn btn-secondary my-4" data-dismiss="modal">Cancel</button>
                                 </div>
                         </div>
@@ -69,7 +68,45 @@
 </form>
 <script>
     var table;
+    var toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike', 'link'], // toggled buttons
+        ['blockquote'],
 
+        [{
+            'list': 'ordered'
+        }, {
+            'list': 'bullet'
+        }],
+        [{
+            'script': 'sub'
+        }, {
+            'script': 'super'
+        }], // superscript/subscript
+        [{
+            'indent': '-1'
+        }, {
+            'indent': '+1'
+        }], // outdent/indent
+
+        [{
+            'size': ['small', false, 'large', 'huge']
+        }], // custom dropdown
+        [{
+            'header': [1, 2, 3, 4, 5, 6, false]
+        }],
+
+        [{
+            'color': []
+        }, {
+            'background': []
+        }], // dropdown with defaults from theme
+        [{
+            'align': []
+        }],
+
+        ['clean'] // remove formatting button
+    ];
+    var quill;
     function compile_datatable() {
         table = $('#dataTable').DataTable({
             "order": [],
@@ -90,6 +127,12 @@
     }
     $(document).ready(function() {
         compile_datatable();
+        quill = new Quill('.quill-editor', {
+            modules: {
+                toolbar: toolbarOptions
+            },
+            theme: 'snow'
+        });
     })
     $(document).on('click', '.item-delete', function() {
         if (confirm('Are you sure to delete?')) {
@@ -98,4 +141,9 @@
             });
         }
     })
+    function submitForm() {
+        $('#quill-content').html(quill.root.innerHTML)
+        quill.setText('');
+        ajax_form($('#form-news'));
+    }
 </script>

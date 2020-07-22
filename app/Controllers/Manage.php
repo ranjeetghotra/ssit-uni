@@ -230,6 +230,7 @@ class Manage extends BaseController
 			$this->db->table('event')->where(['event_id' => $para2])->delete();
 		} elseif ($para1 == 'new') {
 			$data['event_title'] = $this->request->getPost('title');
+			$data['event_detail'] = $this->request->getPost('detail');
 			$data['event_date'] = $this->request->getPost('date');
 			$data['event_created_at'] = date('Y-m-d H:i:s');
 			$this->db->table('event')->insert($data);
@@ -282,6 +283,7 @@ class Manage extends BaseController
 			$this->db->table('news')->where(['news_id' => $para2])->delete();
 		} elseif ($para1 == 'new') {
 			$data['news_title'] = $this->request->getPost('news');
+			$data['news_detail'] = $this->request->getPost('detail');
 			$data['news_created_at'] = date('Y-m-d H:i:s');
 			$this->db->table('news')->insert($data);
 			$output['success'] = true;

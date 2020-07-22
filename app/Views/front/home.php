@@ -16,7 +16,7 @@
                             <?php endforeach ?>
                         </div><!-- /.slider-image -->
                     </div><!-- /.col-md-6 -->
-                    <div class="col-md-6 col-sm-5">
+                    <div class="col-md-6 col-sm-5" id="admission">
                         <div class="slider-content">
                             <div class="row">
                                 <div class="col-md-12">
@@ -91,7 +91,7 @@
                             <?php foreach ($news as $n) : ?>
                                 <article>
                                     <figure class="date"><i class="fa fa-file-o"></i><?= date('j-M-Y', strtotime($n['news_created_at'])) ?></figure>
-                                    <header><a><?= $n['news_title'] ?></a></header>
+                                    <header><a href="/news/<?= $n['news_id'] ?>"><?= $n['news_title'] ?></a></header>
                                 </article><!-- /article -->
                             <?php endforeach ?>
                         </div><!-- /.section-content -->
@@ -102,7 +102,6 @@
                     <section class="events small" id="events-small">
                         <header>
                             <h2>Events</h2>
-                            <a href="" class="link-calendar">Calendar</a>
                         </header>
                         <div class="section-content">
                             <?php $i = 0;
@@ -114,7 +113,7 @@
                                     </figure>
                                     <aside>
                                         <header>
-                                            <a href="event-detail.html"><?= $e['event_title'] ?></a>
+                                            <a href="/event/<?= $e['event_id'] ?>"><?= $e['event_title'] ?></a>
                                         </header>
                                         <div class="additional-info" style="min-height: 15px;"><?= $e['event_location'] ?></div>
                                     </aside>

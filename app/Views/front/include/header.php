@@ -2,18 +2,13 @@
     <div class="secondary-navigation-wrapper">
         <div class="container">
             <div class="navigation-contact pull-left">Call Us: <span class="opacity-70">05947-222088</span></div>
-            <!--<div class="search">
-                <div class="input-group">
-                    <input type="search" class="form-control" name="search" placeholder="Search">
-                    <span class="input-group-btn"><button type="submit" id="search-submit" class="btn"><i class="fa fa-search"></i></button></span>
-                </div>
-            </div>
             <ul class="secondary-navigation list-unstyled">
-                <li><a href="#">Prospective Students</a></li>
-                <li><a href="#">Current Students</a></li>
-                <li><a href="#">Faculty & Staff</a></li>
-                <li><a href="#">Alumni</a></li>
-            </ul>-->
+                <li><a href="/#admission">Admission Form</a></li>
+                <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble fa-lg"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin fa-lg"></i></a></li>
+                <li><a href="#"><i class="fa fa-vimeo-square fa-lg"></i></a></li>
+            </ul>
         </div>
     </div><!-- /.secondary-navigation -->
     <div class="primary-navigation-wrapper">
@@ -81,11 +76,11 @@
                         <li>
                             <a class="has-child no-link">Academics</a>
                             <ul class="list-unstyled child-navigation">
-                                <li><a href="/">Academics</a></li>
-                                <li><a href="/">Department Of Applied Sciences</a></li>
-                                <li><a href="/">Department Of Mechanical Engineering</a></li>
-                                <li><a href="/">Department Of Civil Engineering</a></li>
-                                <li><a href="/">Department Of Electrical Engineering</a></li>
+                                <li><a href="/course/applied-science">Department Of Applied Sciences</a></li>
+                                <li><a href="/course/automobile-engineering">Department Of Automobile Engineering</a></li>
+                                <li><a href="/course/mechanical-engineering">Department Of Mechanical Engineering</a></li>
+                                <li><a href="/course/civil-engineering">Department Of Civil Engineering</a></li>
+                                <li><a href="/course/electrical-engineering">Department Of Electrical Engineering</a></li>
                             </ul>
                         </li>
                         <li>
@@ -103,6 +98,6 @@
         </header><!-- /.navbar -->
     </div><!-- /.primary-navigation -->
     <div class="background">
-        <img src="assets/img/background-city.png" alt="background">
+        <img src="/assets/img/background-city.png" alt="background">
     </div>
 </div>

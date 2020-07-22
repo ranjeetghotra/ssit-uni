@@ -13,12 +13,31 @@ class Home extends BaseController
 		$page_data['page'] = "home";
 		return view('front/index', $page_data);
 	}
+	public function course($page)
+	{
+		$page_data['page'] = 'course/' . $page;
+		return view('front/index', $page_data);
+	}
 	public function page($page, $title = false)
 	{
 		if($title) {
 			$page_data['title'] = $title;
 		}
 		$page_data['page'] = 'pages/' . $page;
+		return view('front/index', $page_data);
+	}
+
+	public function event($id)
+	{
+		$page_data['event'] = $this->db->table('event')->where('event_id' , $id)->get()->getRowArray();
+		$page_data['page'] = 'pages/event_detail';
+		return view('front/index', $page_data);
+	}
+
+	public function news($id)
+	{
+		$page_data['news'] = $this->db->table('news')->where('news_id' , $id)->get()->getRowArray();
+		$page_data['page'] = 'pages/news_detail';
 		return view('front/index', $page_data);
 	}
 
