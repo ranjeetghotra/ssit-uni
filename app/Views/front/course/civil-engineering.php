@@ -24,18 +24,16 @@
                             </section><!-- /#course-header -->
 
                             <section id="course-info">
-                            <img src="/assets/img/course/civil-engg.jpg" alt="Chairman" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
+                            <img src="/assets/img/course/civil-enginerring.JPG" alt="Chairman" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
                                 <header>
                                     <h2>Course Brief</h2>
                                 </header>
                                 <div class="block" style="width: 100%; text-align: justify">
                                     <p>
-                                        Civil Engineering is a Professional Engineering discipline that deals with the design, construction and maintenance of the physical
-                                        and naturally built environment, including works such as bridges, roads, canals, dams and buildings. It is traditionally broken
-                                        into several sub-disciplines including Environmental Engineering, Geotechnical Engineering, Structural Engineering, Transportation
-                                        Engineering, Municipal or Urban Engineering, Water Resources Engineering, Materials Engineering, Coastal Engineering, Surveying
-                                        and Construction Engineering. Civil engineering takes place on all levels: in the Public Sector ranging from Municipal to Federal
-                                        levels, and in the Private Sector ranging from individual homeowners to international companies.<br>
+                                        Civil Engineering is a Professional Engineering discipline that deals with the design, construction and maintenance of the physical and naturally built environment, 
+                                        including works such as bridges, roads, canals, dams and buildings. It is traditionally broken into several sub-disciplines including Environmental Engineering, 
+                                        Geotechnical Engineering, Structural Engineering, Transportation Engineering, Municipal or Urban Engineering, Water Resources Engineering, Materials Engineering, 
+                                        Surveying and Construction Engineering.<br>
                                     </p>
                                 </div>
                             </section><!-- /#course-info -->

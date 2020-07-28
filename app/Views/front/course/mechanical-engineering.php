@@ -19,21 +19,20 @@
                         <article class="event-detail">
                             <section id="event-header">
                                 <header>
-                                    <h1>Department of Electrical Engineering</h1>
+                                    <h1>Department of Mechanical Engineering</h1>
                                 </header>
                             </section><!-- /#course-header -->
 
                             <section id="course-info">
-                            <img src="/assets/img/course/mechanical-engg.jpg" alt="Chairman" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
+                            <img src="/assets/img/course/mechanical-enginerring2.JPG" alt="Chairman" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
                                 <header>
                                     <h2>Course Brief</h2>
                                 </header>
                                 <div class="block" style="width: 100%; text-align: justify">
                                     <p>
-                                        Electrical Engineering is a field of engineering that generally deals with the study and application of electricity, electronics and
-                                        electromagnetism. It covers a range of subtopics including power, electronics, control systems, signal processing and telecommunications.
-                                        Electrical engineers possess an academic degree with a major in Electrical Engineering. The duration of course for this diploma is
-                                        three years and on completion Engineering diploma is awarded.<br>
+                                        Mechanical Engineering is an engineering discipline that was developed from the application of principles from physics and materials science. 
+                                        According to the American Heritage Dictionary, it is the branch of engineering that encompasses the generation and application of heat and 
+                                        mechanical power and the design, production, and use of machines and tools. It is one of the oldest Engineering disciplines.<br>
                                     </p>
                                 </div>
                             </section><!-- /#course-info -->

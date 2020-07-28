@@ -59,6 +59,7 @@
                             <h4>Important Links</h4>
                         </header>
                         <ul class="list-links">
+                            <li><a href="/#">Placement</a></li>
                             <li><a href="/press-release">Press Release</a></li>
                             <li><a href="/vision-mission">Vision & Mission</a></li>
                             <li><a href="/gallery">Gallery</a></li>

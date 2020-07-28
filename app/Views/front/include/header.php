@@ -58,6 +58,7 @@
                                 <li><a href="/vision-mission">Vision & Mission</a></li>
                                 <li><a href="/chairman-message">Chairman's Message</a></li>
                                 <li><a href="/principal-message">Principal's Message</a></li>
+                                <li><a href="/assets/pdf/AICTE_APPROVAL_2020-21.pdf">AICTE APPROVAL 2020-2021</a></li>
                                 <li><a href="/assets/pdf/AICTE_APPROVAL_2019-20.pdf">AICTE APPROVAL 2019-2020</a></li>
                                 <li><a href="/assets/pdf/AICTE_APPROVAL_2018-19.pdf">AICTE APPROVAL 2018-2019</a></li>
                                 <li><a href="/assets/pdf/AICTE_APPROVAL_2017-18.pdf">AICTE APPROVAL 2017-2018</a></li>
@@ -66,23 +67,25 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="has-child no-link">Why SSIT</a>
-                            <ul class="list-unstyled child-navigation">
-                                <li><a href="/why-ssit">Why SSIT</a></li>
-                                <li><a href="/placement-record">Placement Record</a></li>
-                                <li><a href="/personality-development">Personality Development</a></li>
-                            </ul>
+                            <a href="/why-ssit">Why SSIT</a>
                         </li>
                         <li>
                             <a class="has-child no-link">Academics</a>
                             <ul class="list-unstyled child-navigation">
                                 <li><a href="/course/applied-science">Department Of Applied Sciences</a></li>
-                                <li><a href="/course/automobile-engineering">Department Of Automobile Engineering</a></li>
-                                <li><a href="/course/mechanical-engineering">Department Of Mechanical Engineering</a></li>
                                 <li><a href="/course/civil-engineering">Department Of Civil Engineering</a></li>
                                 <li><a href="/course/electrical-engineering">Department Of Electrical Engineering</a></li>
+                                <li><a href="/course/mechanical-engineering">Department Of Mechanical Engineering</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <a class="has-child no-link">Admission</a>
+                            <ul class="list-unstyled child-navigation">
+                                <li><a href="/admission">Admission Process</a></li>
+                                <li><a href="Registration_form 2020.pdf">Registration Form</a></li>
+                            </ul>
+                        </li>
+                         
                         <li>
                             <a href="/press-release">Press Release</a>
                         </li>

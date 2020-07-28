@@ -3,7 +3,7 @@
     <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
         <li><a href="#">Events</a></li>
-        <li class="active">Department of Automobile Engineering</li>
+        <li class="active">Department of Electrical Engineering</li>
     </ol>
 </div>
 <!-- end Breadcrumb -->
@@ -19,7 +19,7 @@
                         <article class="event-detail">
                             <section id="event-header">
                                 <header>
-                                    <h1>Department of Automobile Engineering</h1>
+                                    <h1>Department of Electrical Engineering</h1>
                                 </header>
                             </section><!-- /#course-header -->
 
@@ -30,10 +30,7 @@
                                 </header>
                                 <div class="block" style="width: 100%; text-align: justify">
                                     <p>
-                                        Automobile engineering deals with designing the vehicle, manufacturing new products, repairing, and servicing vehicles.
-                                        It is also known as automotive engineering or vehicle engineering. It involves studying motor systems, design, technology and many more.
-                                        This branch deals with the designing, developing, manufacturing, testing and repairing and servicing automobiles such as cars,
-                                        trucks, motorcycles, scooters etc &amp; the related sub Engineering systems.<br>
+                                        Electrical Engineering is a field of engineering that generally deals with the study and application of electricity, electronics and electromagnetism. It covers a range of subtopics including power, electronics, control systems, signal processing and telecommunications. Electrical engineers possess an academic degree with a major in Electrical Engineering.<br>
                                     </p>
                                 </div>
                             </section><!-- /#course-info -->

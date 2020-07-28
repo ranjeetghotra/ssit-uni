@@ -2,8 +2,8 @@
 <div class="container">
     <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Events</a></li>
-        <li class="active">Department of Applied Science</li>
+        <li><a href="#">Admission</a></li>
+        <li class="active">Admission Process</li>
     </ol>
 </div>
 <!-- end Breadcrumb -->
@@ -19,20 +19,29 @@
                         <article class="event-detail">
                             <section id="event-header">
                                 <header>
-                                    <h1>Department of Applied Science</h1>
+                                    <h1>Admission Process</h1>
                                 </header>
                             </section><!-- /#course-header -->
 
                             <section id="course-info">
-                                <img src="/assets/img/course/Applied-Science-Course-1.JPG" alt="Chairman" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
+                                <img src="/assets/img/assets/img/admission.jpg" alt="Admission" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
 
                                 <header>
-                                    <h2>Course Brief</h2>
+                                    <h2>Admission Process</h2>
                                 </header>
                                 <div class="block" style="width: 100%; text-align: justify">
                                     <p>
-                                        The aims of department are a holistic development of the first year engineering students. It prepares the students for higher studies required specifically for industries by imparting knowledge on the fundamental principles of Physics, Chemistry, Mathematics & Professional Communication. The courses taught by the teachers of this department lay the foundation of engineering sciences.
-Professional communication is of particular importance for improving the Verbal and Written skills of students. An understanding of Physics and Chemistry is essential to several engineering subjects like electronics, electrical engineering and engineering materials. Mathematics is undisputedly important in all fields of engineering.<br>
+                                        Eligibility Criteria for Diploma In Engineering 
+Branches offered: Mechanical Engineering, Civil Engineering, Electrical Engineering 
+1.	For Regular Program 
+Duration: 03 Years 
+•	Clear Passed in Xth Standard with Maths (Not Elementry Maths) and Science Subjects.
+(Obtained at least 35% marks at the qualifying examination)
+2.Lateral Entry (Direct Second year)
+Duration: 02 Years
+•	Clear Passed in 12th (Physics, Chemistry, Maths) 
+•	Clear Passed Two years ITI  
+<br>
                                     </p>
                                 </div>
                             </section><!-- /#course-info -->

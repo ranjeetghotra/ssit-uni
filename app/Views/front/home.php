@@ -144,7 +144,7 @@
             <article class="event col-md-6">
                 <div class="event-thumbnail">
                     <figure class="event-image">
-                        <div class="image-wrapper"><img src="/assets/img/course/civil.jpg"></div>
+                        <div class="image-wrapper"><img src="/assets/img/course/Civil.jpg"></div>
                     </figure>
                 </div>
                 <aside>
@@ -162,7 +162,7 @@
             <article class="event col-md-6">
                 <div class="event-thumbnail">
                     <figure class="event-image">
-                        <div class="image-wrapper"><img src="/assets/img/course/electrical.jpg"></div>
+                        <div class="image-wrapper"><img src="/assets/img/course/Electrical.jpg"></div>
                     </figure>
                 </div>
                 <aside>
@@ -180,7 +180,7 @@
             <article class="event col-md-6">
                 <div class="event-thumbnail">
                     <figure class="event-image">
-                        <div class="image-wrapper"><img src="/assets/img/course/mechanical.jpg"></div>
+                        <div class="image-wrapper"><img src="/assets/img/course/Mechanical.jpg"></div>
                     </figure>
                 </div>
                 <aside>
@@ -195,26 +195,8 @@
                     <a href="" class="btn btn-framed btn-color-grey btn-small">View Details</a>
                 </aside>
             </article>
-            <article class="event col-md-6">
-                <div class="event-thumbnail">
-                    <figure class="event-image">
-                        <div class="image-wrapper"><img src="/assets/img/course/automobile.jpg"></div>
-                    </figure>
-                </div>
-                <aside>
-                    <header>
-                        <a href="">Diploma in Automobile Engineering</a>
-                    </header>
-                    <div class="additional-info">
-                        <a>1 Year</a>
-                    </div>
-                    <div class="description">
-                    </div>
-                    <a href="" class="btn btn-framed btn-color-grey btn-small">View Details</a>
-                </aside>
-            </article>
         </section>
-    </div>
+    </div> 
     <!-- Testimonial -->
     <section id="testimonials">
         <div class="block">
@@ -224,8 +206,8 @@
                         <blockquote>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
-                                    <header> Don’t let what you cannot do interfere with what you can do.</header>
-                                    <footer>John Wooden</footer>
+                                    <header>I feel proud to have a alumni of Sri Sai Polytechnic.</header>
+                                    <footer>Usmaan Saifi - Lohaar Enginerring and Construction Private Ltd.</footer>
                                 </div>
                             </article>
                         </blockquote>
@@ -234,8 +216,8 @@
                         <blockquote>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
-                                    <header> Failure is the opportunity to begin again more intelligently. </header>
-                                    <footer>Henry Ford</footer>
+                                    <header> I am highly obliged to Hon'ble Chairman Sir, Respected Director Sir and departmental Head and faculty members for their Continuous Support and Guidance. </header>
+                                    <footer>Prateek Kumar - Bajaj Motors Haridwar</footer>
                                 </div>
                             </article>
                         </blockquote>
