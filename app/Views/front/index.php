@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="<?= $page == 'home' ? "page-homepage-carousel" : "page-sub-page page-contact" ?>">
+<body class="<?= $page == 'home' ? "page-homepage-carousel page-sub-page" : "page-sub-page page-contact" ?>">
     <!-- Wrapper -->
     <div class="wrapper">
         <!-- Header -->

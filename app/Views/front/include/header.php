@@ -1,3 +1,26 @@
+<style>
+    .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav .open-subchild{
+        position: relative;
+    }
+    .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav .open-subchild .subchild-navigation {
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav .open-subchild:hover .subchild-navigation {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav li .subchild-navigation {
+        left: 100%;
+        top: 0;
+        position: absolute;
+    }
+    .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav li .subchild-navigation li:first-child a:after  {
+        content: none;
+    }
+</style>
 <div class="navigation-wrapper">
     <div class="secondary-navigation-wrapper">
         <div class="container">
@@ -72,8 +95,13 @@
                         <li>
                             <a class="has-child no-link">Academics</a>
                             <ul class="list-unstyled child-navigation">
-                                <li><a href="/course/applied-science">Department Of Applied Sciences</a></li>
-                                <li><a href="/course/civil-engineering">Department Of Civil Engineering</a></li>
+                                <li><a href="/course/applied-science">Department Of Applied Sciences</a> </li>
+                                <li class="open-subchild"><a class="has-child" href="/course/civil-engineering">Department Of Civil Engineering</a>
+                                    <ul class="list-unstyled child-navigation subchild-navigation">
+                                        <li><a href="">one</a></li>
+                                        <li><a href="">two</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="/course/electrical-engineering">Department Of Electrical Engineering</a></li>
                                 <li><a href="/course/mechanical-engineering">Department Of Mechanical Engineering</a></li>
                             </ul>
@@ -85,7 +113,7 @@
                                 <li><a href="Registration_form 2020.pdf">Registration Form</a></li>
                             </ul>
                         </li>
-                         
+
                         <li>
                             <a href="/press-release">Press Release</a>
                         </li>
