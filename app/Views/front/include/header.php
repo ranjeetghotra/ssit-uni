@@ -24,9 +24,10 @@
 <div class="navigation-wrapper">
     <div class="secondary-navigation-wrapper">
         <div class="container">
-            <div class="navigation-contact pull-left">Call Us: <span class="opacity-70">05947-222088</span></div>
+            <div class="navigation-contact pull-left">Call Us: @<span class="opacity-70"> +91 8449470500</span></div>
             <ul class="secondary-navigation list-unstyled">
                 <li><a href="/#admission">Admission Form</a></li>
+                <li><a href="www.facebook.com/ssitjaspur"><i class="fa fa-facebook fa-lg"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
                 <li><a href="#"><i class="fa fa-dribbble fa-lg"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin fa-lg"></i></a></li>
@@ -95,22 +96,34 @@
                         <li>
                             <a class="has-child no-link">Academics</a>
                             <ul class="list-unstyled child-navigation">
-                                <li><a href="/course/applied-science">Department Of Applied Sciences</a> </li>
+                                <li class="open-subchild"><a class="has-child" href="/course/applied-science">Department Of Applied Science</a>
+                                    <ul class="list-unstyled child-navigation subchild-navigation">
+                                        <li><a href="/aboutapplieddept">About The Dept.</a></li>
+                                        <li><a href="/AppliedScienceHODMessage">HOD Message</a></li>
+                                    </ul>
                                 <li class="open-subchild"><a class="has-child" href="/course/civil-engineering">Department Of Civil Engineering</a>
                                     <ul class="list-unstyled child-navigation subchild-navigation">
-                                        <li><a href="">one</a></li>
-                                        <li><a href="">two</a></li>
+                                        <li><a href="/course/applied-science">About The Dept.</a></li>
+                                        <li><a href="/AppliedScienceHODMessage">HOD Message</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="/course/electrical-engineering">Department Of Electrical Engineering</a></li>
-                                <li><a href="/course/mechanical-engineering">Department Of Mechanical Engineering</a></li>
+                                <li class="open-subchild"><a class="has-child" href="/course/electrical-engineering">Department Of Electrical Engineering</a>
+                                    <ul class="list-unstyled child-navigation subchild-navigation">
+                                        <li><a href="">About The Dept.</a></li>
+                                        <li><a href="">HOD Message</a></li>
+                                    </ul>
+                                <li class="open-subchild"><a class="has-child" href="/course/mechanical-engineering">Department Of Mechinal Engineering</a>
+                                    <ul class="list-unstyled child-navigation subchild-navigation">
+                                        <li><a href="">About The Dept.</a></li>
+                                        <li><a href="">HOD Message</a></li>
+                                    </ul>
                             </ul>
                         </li>
                         <li>
                             <a class="has-child no-link">Admission</a>
                             <ul class="list-unstyled child-navigation">
                                 <li><a href="/admission">Admission Process</a></li>
-                                <li><a href="Registration_form 2020.pdf">Registration Form</a></li>
+                                <li><a href="/assets/pdf/Registration_form 2020.pdf">Registration Form</a></li>
                             </ul>
                         </li>
 

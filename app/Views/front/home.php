@@ -129,8 +129,8 @@
                         </header>
                         <div class="section-content">
                             <img src="/assets/img/campus/college.png" alt="" class="add-margin img-responsive">
-                            <p>The <strong>Sri Sai Institute of Technology</strong> is setup to impart quality education in the field of Diploma in Engineering (ME, ME[Automobile], Civil, Electrical) and to groom young people with knowledge and skills that would help them make meaningful contribution to commerce and society.
-                                SSIT is the congregation of knowledge and vision that provides a unique opportunity to its students to gain insights into tomorrow’s technology.</p>
+                            <p>The <strong>Sri Sai Institute of Technology</strong> is setup to impart quality education in the field of Diploma in Engineering like Mechanical Civil, Electrical Enginerring and to groom young people with knowledge and skills.
+                               <br> SSIT is the congregation of knowledge and vision that provides a unique opportunity for students to gain insights into tomorrow’s technology.</p>
                             <br><a href="/about-us" class="read-more stick-to-bottom">Read More</a>
                         </div><!-- /.section-content -->
                     </section><!-- /.about -->

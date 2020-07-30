@@ -24,23 +24,28 @@
                             </section><!-- /#course-header -->
 
                             <section id="course-info">
-                                <img src="/assets/img/assets/img/admission.jpg" alt="Admission" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
+                                <img src="/assets/img/admission/Admission.JPG" alt="Admission" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
 
                                 <header>
                                     <h2>Admission Process</h2>
                                 </header>
                                 <div class="block" style="width: 100%; text-align: justify">
                                     <p>
-                                        Eligibility Criteria for Diploma In Engineering 
-Branches offered: Mechanical Engineering, Civil Engineering, Electrical Engineering 
-1.	For Regular Program 
-Duration: 03 Years 
-•	Clear Passed in Xth Standard with Maths (Not Elementry Maths) and Science Subjects.
-(Obtained at least 35% marks at the qualifying examination)
-2.Lateral Entry (Direct Second year)
-Duration: 02 Years
-•	Clear Passed in 12th (Physics, Chemistry, Maths) 
-•	Clear Passed Two years ITI  
+                                        <b>Eligibility Criteria for Diploma In Engineering </b>
+                                        </p>
+Branches offered: Mechanical Engineering, Civil Engineering, Electrical Engineering. 
+<p>
+<li><b>1.	For Regular Program 
+Duration: 03 Years </b>
+<br>
+<ul>Clear Passed in Xth Standard with Maths (Not Elementry Maths) and Science Subjects.
+(Obtained at least 35% marks at the qualifying examination)</ul></li>
+<br>
+<li><b>2. Lateral Entry (Direct Second year)
+Duration: 02 Years</b>
+<br>
+<ul>Clear Passed in 12th (Physics, Chemistry, Maths) </ul>
+<ul>Clear Passed Two years ITI  </ul></li>
 <br>
                                     </p>
                                 </div>

@@ -17,7 +17,7 @@
                         <header>
                             <h2>Why SSIT</h2>
                         </header>
-                        <img class="img-responsive" src="/assets/img/campus/college.png">
+                        <img class="img-responsive" src="/assets/img/campus/Why-SSIT.jpg">
                         <ul>
                             <li>Awarded Best Campus in Rural Ares “Education Excellence Award”</li>
                             <li>Awarded Best Institute for Promoting Academic – Industry Interface.</li>
