@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col">
             <div class="card">
-                <form>
+                <form id="form-page" action="/manage/page/insert">
                     <!-- Card header -->
                     <div class="card-header border-0">
                         <h3 class="mb-0">Add Page</h3>
@@ -29,7 +29,7 @@
                     <div class="container">
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title">
+                            <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title"  required>
                         </div>
                         <div class="form-group">
                             <label for="basic-url">Your vanity URL</label>
@@ -37,7 +37,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon3">page/</span>
                                 </div>
-                                <input type="text" name="url" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                <input type="text" name="url" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -52,7 +52,7 @@
                     </div>
                     <!-- Card footer -->
                     <div class="card-footer py-4">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" onclick="submitForm()" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
@@ -109,4 +109,9 @@
             theme: 'snow'
         });
     })
+    function submitForm() {
+        $('#quill-content').html(quill.root.innerHTML)
+        quill.setText('');
+        ajax_form($('#form-page'));
+    }
 </script>
