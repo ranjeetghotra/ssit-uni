@@ -2,6 +2,11 @@
     .events.images .event .event-thumbnail .event-image .image-wrapper img {
         height: 165px;
     }
+    .author-picture img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
 </style>
 <div id="page-content">
     <!-- Slider -->
@@ -204,7 +209,7 @@
                 <div class="author-carousel">
                     <div class="author">
                         <blockquote>
-                            <figure class="author-picture"><img src="" alt=""></figure>
+                            <figure class="author-picture"><img src="/images/testimonial/Usmaan.PNG" alt=""></figure>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
                                     <header>I feel proud to have a alumni of Sri Sai Polytechnic.</header>
@@ -215,7 +220,7 @@
                     </div><!-- /.author -->
                     <div class="author">
                         <blockquote>
-                            <figure class="author-picture"><img src="" alt=""></figure>
+                            <figure class="author-picture"><img src="/images/testimonial/Prateek.jpg" alt=""></figure>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
                                     <header> I am highly obliged to Hon'ble Chairman Sir, Respected Director Sir and departmental Head and faculty members for their Continuous Support and Guidance. </header>

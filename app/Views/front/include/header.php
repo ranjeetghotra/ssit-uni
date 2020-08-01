@@ -92,24 +92,24 @@ $admissionList = $db->table('page')->orderBy('page_title', 'desc')->where('page_
                             <ul class="list-unstyled child-navigation">
                                 <li class="open-subchild"><a class="has-child" href="/course/applied-science">Department Of Applied Science</a>
                                     <ul class="list-unstyled child-navigation subchild-navigation">
-                                        <li><a href="/aboutapplieddept">About The Dept.</a></li>
-                                        <li><a href="/AppliedScienceHODMessage">HOD Message</a></li>
+                                        <li><a href="/page/AS-About-The-Department">About The Department</a></li>
+                                        <li><a href="/page/AS-HOD-Message">HOD Message</a></li>
                                     </ul>
                                 <li class="open-subchild"><a class="has-child" href="/course/civil-engineering">Department Of Civil Engineering</a>
                                     <ul class="list-unstyled child-navigation subchild-navigation">
-                                        <li><a href="/course/applied-science">About The Dept.</a></li>
-                                        <li><a href="/AppliedScienceHODMessage">HOD Message</a></li>
+                                        <li><a href="/page/CE-About-The-Department">About The Department</a></li>
+                                        <li><a href="/page/CE-HOD-Message">HOD Message</a></li>
                                     </ul>
                                 </li>
                                 <li class="open-subchild"><a class="has-child" href="/course/electrical-engineering">Department Of Electrical Engineering</a>
                                     <ul class="list-unstyled child-navigation subchild-navigation">
-                                        <li><a href="">About The Dept.</a></li>
-                                        <li><a href="">HOD Message</a></li>
+                                        <li><a href="/page/EE-About-The-Dept">About The Department</a></li>
+                                        <li><a href="/page/HOD-Message">HOD Message</a></li>
                                     </ul>
-                                <li class="open-subchild"><a class="has-child" href="/course/mechanical-engineering">Department Of Mechinal Engineering</a>
+                                <li class="open-subchild"><a class="has-child" href="/course/mechanical-engineering">Department Of Mechanical Engineering</a>
                                     <ul class="list-unstyled child-navigation subchild-navigation">
-                                        <li><a href="">About The Dept.</a></li>
-                                        <li><a href="">HOD Message</a></li>
+                                        <li><a href="page/ME-About-The-Department">About The Department</a></li>
+                                        <li><a href="page/ME-HOD-Message">HOD Message</a></li>
                                     </ul>
                                     <?php
                                     foreach ($academicList as $item) {
