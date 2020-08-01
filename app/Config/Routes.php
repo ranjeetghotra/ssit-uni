@@ -45,9 +45,14 @@ $routes->add('why-ssit', 'Home::page/why-ssit/Why SSIT');
 $routes->add('placement-record', 'Home::page/placement-record/Placement Record');
 $routes->add('personality-development', 'Home::page/personality-development/Personality Traits to Develop');
 
+$routes->add('AppliedScienceHODMessage', 'Home::page/AppliedScienceHODMessage/Applied Science HOD Message');
+$routes->add('aboutapplieddept', 'Home::page/aboutapplieddept/About Applied Department');
+
 $routes->add('event/(:segment)', 'Home::event/$1');
 $routes->add('news/(:segment)', 'Home::news/$1');
 $routes->add('course/(:segment)', 'Home::course/$1');
+
+$routes->add('page/(:segment)', 'Home::pages/$1');
 
 $routes->add('auth/admin', 'Manage::login');
 $routes->add('auth/admin/submit', 'Manage::login/submit');

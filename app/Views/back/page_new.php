@@ -29,21 +29,21 @@
                     <div class="container">
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title"  required>
+                            <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title" required>
                         </div>
                         <div class="form-group">
-                            <label for="basic-url">Your vanity URL</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon3">page/</span>
-                                </div>
-                                <input type="text" name="url" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
-                            </div>
+                            <label for="exampleFormControlSelect1">Menu</label>
+                            <select name="type" class="form-control" id="exampleFormControlSelect1">
+                                <option value="">---No Menu---</option>
+                                <option value="about">About</option>
+                                <option value="academics">Academics</option>
+                                <option class="admission">admission</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="image">Image</label>
                             <div class="custom-file">
-                                <input type="file"  name="image" class="custom-file-input" id="customFile">
+                                <input type="file" name="images[]" class="custom-file-input" id="customFile">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
                         </div>
@@ -109,6 +109,7 @@
             theme: 'snow'
         });
     })
+
     function submitForm() {
         $('#quill-content').html(quill.root.innerHTML)
         quill.setText('');

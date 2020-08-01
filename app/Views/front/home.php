@@ -130,7 +130,7 @@
                         <div class="section-content">
                             <img src="/assets/img/campus/college.png" alt="" class="add-margin img-responsive">
                             <p>The <strong>Sri Sai Institute of Technology</strong> is setup to impart quality education in the field of Diploma in Engineering like Mechanical Civil, Electrical Enginerring and to groom young people with knowledge and skills.
-                               <br> SSIT is the congregation of knowledge and vision that provides a unique opportunity for students to gain insights into tomorrow’s technology.</p>
+                                <br> SSIT is the congregation of knowledge and vision that provides a unique opportunity for students to gain insights into tomorrow’s technology.</p>
                             <br><a href="/about-us" class="read-more stick-to-bottom">Read More</a>
                         </div><!-- /.section-content -->
                     </section><!-- /.about -->
@@ -196,7 +196,7 @@
                 </aside>
             </article>
         </section>
-    </div> 
+    </div>
     <!-- Testimonial -->
     <section id="testimonials">
         <div class="block">
@@ -204,6 +204,7 @@
                 <div class="author-carousel">
                     <div class="author">
                         <blockquote>
+                            <figure class="author-picture"><img src="" alt=""></figure>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
                                     <header>I feel proud to have a alumni of Sri Sai Polytechnic.</header>
@@ -214,6 +215,7 @@
                     </div><!-- /.author -->
                     <div class="author">
                         <blockquote>
+                            <figure class="author-picture"><img src="" alt=""></figure>
                             <article class="paragraph-wrapper">
                                 <div class="inner">
                                     <header> I am highly obliged to Hon'ble Chairman Sir, Respected Director Sir and departmental Head and faculty members for their Continuous Support and Guidance. </header>

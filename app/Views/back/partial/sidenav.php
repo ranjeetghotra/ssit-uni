@@ -59,6 +59,12 @@
                             <span class="nav-link-text">Admission</span>
                         </a>
                     </li>
+                    <li class="nav-item <?= $page == "page" ? "active" : "" ?>">
+                        <a class="nav-link" href="/manage/page">
+                            <i class="ni ni-single-copy-04 text-dark"></i>
+                            <span class="nav-link-text">Pages</span>
+                        </a>
+                    </li>
                 </ul>
                 <?php /*<!-- Divider -->
                 <hr class="my-3">

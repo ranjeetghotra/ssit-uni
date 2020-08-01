@@ -26,6 +26,13 @@ class Home extends BaseController
 		$page_data['page'] = 'pages/' . $page;
 		return view('front/index', $page_data);
 	}
+	public function pages($page)
+	{
+		$page_data['prow'] = $this->db->table('page')->where('page_slug', $page)->get()->getRowArray();
+		$page_data['title'] = $page_data['prow']['page_title'];
+		$page_data['page'] = 'pages/page';
+		return view('front/index', $page_data);
+	}
 
 	public function event($id)
 	{

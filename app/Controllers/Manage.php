@@ -108,10 +108,10 @@ class Manage extends BaseController
 			$image = $this->db->table('press')->getWhere(['press_id' => $para2])->getRow()->press_name;
 			$this->db->table('press')->where(['press_id' => $para2])->delete();
 			if ($image) {
-				if(file_exists('images/press/full/' . $image)){
+				if (file_exists('images/press/full/' . $image)) {
 					unlink('images/press/full/' . $image);
 				}
-				if(file_exists('images/press/thumb/' . $image)){
+				if (file_exists('images/press/thumb/' . $image)) {
 					unlink('images/press/thumb/' . $image);
 				};
 			}
@@ -120,11 +120,83 @@ class Manage extends BaseController
 			return view('back/index', $page_data);
 		}
 	}
-	public function page($para1 = '')
+	public function page($para1 = '', $para2 = '')
 	{
 		if ($para1 == 'new') {
 			$page_data['page'] = 'page_new';
 			return view('back/index', $page_data);
+		} elseif ($para1 == 'list_data') {
+			$limit = $this->request->getPost('length');
+			$start = $this->request->getPost('start');
+			$search = $this->request->getPost('search')['value'];
+			$order = $this->request->getPost('order')[0]['column'];
+			$dir = $this->request->getPost('order')[0]['dir'];
+			$data = array();
+
+			$builder = $this->db->table('page');
+			if ($search) {
+				// $builder->like('subcat_name', $search, 'both');
+				// $builder->orlike('category_name', $search, 'both');
+			}
+			// $subcat = $builder->join('category', 'subcat.subcat_category = category.category_id')->get()->getResult('array');
+			$builder->orderBy('page_id', 'desc');
+			$contact = $builder->get()->getResult('array');
+			$i = $start;
+			foreach (array_slice($contact, $start, $limit) as $item) {
+				$p = array();
+				$p[] = ++$i;
+				$p[] = $item['page_title'];
+				$p[] = ucfirst($item['page_type']);
+				$p[] = 'page/' . $item['page_slug'];
+				$p[] = '<div class="dropdown show"><a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</a>'
+					. '<div class="dropdown-menu" style="min-width:inherit" aria-labelledby="dropdownMenuLink">'
+					//. '<li data-toggle="modal" data-target="#viewModal" data-id="' . $item['contact_id'] . '" data-subject="' . $item['admission_subject'] . '" class="dropdown-item item-view"><i class="fas fa-eye fa-sm mr-2"></i>Edit</li>'
+					. '<li data-id="' . $item['page_id'] . '" class="dropdown-item text-white bg-danger item-delete"><i class="fas fa-trash fa-sm mr-2"></i>Delete</li>'
+					. '</div></div>';
+				$data[] = $p;
+			}
+			$output["draw"] = intval($this->request->getPost('draw'));
+			$output['recordsTotal'] = count($contact);
+			$output['recordsFiltered'] = count($contact);
+			$output['data'] = $data;
+			return json_encode($output, true);
+		} elseif ($para1 == 'insert') {
+			$data['page_title'] = $this->request->getPost('title');
+			$data['page_type'] = $this->request->getPost('type');
+			$data['page_content'] = $this->request->getPost('content');
+			$data['page_slug'] = url_title($this->request->getPost('title'));
+			$data['page_created_at'] = date('Y-m-d H:i:s');
+			$page_data['page'] = 'page_new';
+
+			$imageArray = [];
+			$imageLib = \Config\Services::image();
+			if ($imagefile = $this->request->getFiles()) {
+				foreach ($imagefile['images'] as $img) {
+					if ($img->isValid() && !$img->hasMoved()) {
+						$newName = $img->getRandomName();
+						if ($img->move('images/page/full', $newName)) {
+							$imageLib->withFile('images/page/full/' . $newName)->flip('horizontal')->flip('horizontal')->save('images/press/full/' . $newName, 50);
+							// $this->db->table('press')->insert(['press_name' => $newName]);
+							$imageArray[] = $newName;
+						}
+					}
+				}
+			}
+			$data['page_image'] = json_encode($imageArray);
+			$this->db->table('page')->insert($data);
+			$output['success'] = true;
+			$output['message'] = "Page Created";
+			echo json_encode($output);
+		} elseif ($para1 == 'delete') {
+			$images = (array) json_decode($this->db->table('page')->getWhere(['page_id' => $para2])->getRow()->page_image);
+			$this->db->table('page')->where(['page_id' => $para2])->delete();
+			foreach ($images as $image) {
+				if ($image) {
+					if (file_exists('images/page/full/' . $image)) {
+						unlink('images/page/full/' . $image);
+					}
+				}
+			}
 		} else {
 			$page_data['page'] = 'page';
 			return view('back/index', $page_data);
@@ -375,10 +447,10 @@ class Manage extends BaseController
 			$image = $this->db->table('slider')->getWhere(['slider_id' => $para2])->getRow()->slider_name;
 			$this->db->table('slider')->where(['slider_id' => $para2])->delete();
 			if ($image) {
-				if(file_exists('images/slider/full/' . $image)){
+				if (file_exists('images/slider/full/' . $image)) {
 					unlink('images/slider/full/' . $image);
 				}
-				if(file_exists('images/slider/thumb/' . $image)){
+				if (file_exists('images/slider/thumb/' . $image)) {
 					unlink('images/slider/thumb/' . $image);
 				}
 			}

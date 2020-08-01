@@ -1,7 +1,8 @@
 <style>
-    .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav .open-subchild{
+    .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav .open-subchild {
         position: relative;
     }
+
     .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav .open-subchild .subchild-navigation {
         visibility: hidden !important;
         opacity: 0 !important;
@@ -17,10 +18,17 @@
         top: 0;
         position: absolute;
     }
-    .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav li .subchild-navigation li:first-child a:after  {
+
+    .navigation-wrapper .primary-navigation-wrapper header nav .navbar-nav li .subchild-navigation li:first-child a:after {
         content: none;
     }
 </style>
+<?php
+$db = db_connect();
+$aboutList = $db->table('page')->orderBy('page_title', 'desc')->where('page_type', 'about')->get()->getResult('array');
+$academicList = $db->table('page')->orderBy('page_title', 'desc')->where('page_type', 'academic')->get()->getResult('array');
+$admissionList = $db->table('page')->orderBy('page_title', 'desc')->where('page_type', 'admission')->get()->getResult('array');
+?>
 <div class="navigation-wrapper">
     <div class="secondary-navigation-wrapper">
         <div class="container">
@@ -54,27 +62,6 @@
                         <li class="">
                             <a href="/">Home</a>
                         </li>
-                        <!--<li>
-                            <a href="#" class=" has-child no-link">Courses</a>
-                            <ul class="list-unstyled child-navigation">
-                                <li><a href="course-landing-page.html">Course Landing Page</a></li>
-                                <li><a href="course-listing.html">Course Listing</a></li>
-                                <li><a href="course-listing-images.html">Course Listing with Images</a></li>
-                                <li><a href="course-detail-v1.html">Course Detail v1</a></li>
-                                <li><a href="course-detail-v2.html">Course Detail v2</a></li>
-                                <li><a href="course-detail-v3.html">Course Detail v3</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="has-child no-link">Events</a>
-                            <ul class="list-unstyled child-navigation">
-                                <li><a href="event-listing-images.html">Events Listing with images</a></li>
-                                <li><a href="event-listing.html">Events Listing</a></li>
-                                <li><a href="event-grid.html">Events Grid</a></li>
-                                <li><a href="event-detail.html">Event Detail</a></li>
-                                <li><a href="event-calendar.html">Events Calendar</a></li>
-                            </ul>
-                        </li>-->
                         <li>
                             <a class="has-child no-link">About Us</a>
                             <ul class="list-unstyled child-navigation">
@@ -88,6 +75,13 @@
                                 <li><a href="/assets/pdf/AICTE_APPROVAL_2017-18.pdf">AICTE APPROVAL 2017-2018</a></li>
                                 <li><a href="/assets/pdf/AICTE_APPROVAL_2016-17.pdf">AICTE APPROVAL 2016-2017</a></li>
                                 <li><a href="/assets/pdf/AICTE_APPROVAL_2015-16.pdf">AICTE APPROVAL 2015-2016</a></li>
+                                <?php
+                                foreach ($aboutList as $item) {
+                                ?>
+                                    <li><a href="/page/<?= $item['page_slug'] ?>"><?= $item['page_title'] ?></a></li>
+                                <?php
+                                }
+                                ?>
                             </ul>
                         </li>
                         <li>
@@ -117,6 +111,13 @@
                                         <li><a href="">About The Dept.</a></li>
                                         <li><a href="">HOD Message</a></li>
                                     </ul>
+                                    <?php
+                                    foreach ($academicList as $item) {
+                                    ?>
+                                <li><a href="/page/<?= $item['page_slug'] ?>"><?= $item['page_title'] ?></a></li>
+                            <?php
+                                    }
+                            ?>
                             </ul>
                         </li>
                         <li>
@@ -124,6 +125,13 @@
                             <ul class="list-unstyled child-navigation">
                                 <li><a href="/admission">Admission Process</a></li>
                                 <li><a href="/assets/pdf/Registration_form 2020.pdf">Registration Form</a></li>
+                                <?php
+                                foreach ($admissionList as $item) {
+                                ?>
+                                    <li><a href="/page/<?= $item['page_slug'] ?>"><?= $item['page_title'] ?></a></li>
+                                <?php
+                                }
+                                ?>
                             </ul>
                         </li>
 
