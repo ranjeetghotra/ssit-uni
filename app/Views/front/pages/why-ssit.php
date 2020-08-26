@@ -17,7 +17,26 @@
                         <header>
                             <h2>Why SSIT</h2>
                         </header>
-                        <img class="img-responsive" src="/assets/img/campus/Why-SSIT.jpg">
+                        <div class="page-slick-carousel">
+                            <div>
+                                <img class="img-thumbnail" src="/images/whyssit/1.jpg">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/whyssit/2.jpg">
+                            </div>
+                             <div>
+                                <img class="img-thumbnail" src="/images/whyssit/3.jpg">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/whyssit/4.jpg">
+                            </div>
+                             <div>
+                                <img class="img-thumbnail" src="/images/whyssit/5.JPG">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/whyssit/6.JPG">
+                            </div>
+                        </div>
                         <ul>
                             <li>Awarded Best Campus in Rural Ares “Education Excellence Award”</li>
                             <li>Awarded Best Institute for Promoting Academic – Industry Interface.</li>

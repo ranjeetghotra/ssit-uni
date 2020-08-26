@@ -45,7 +45,8 @@ Duration: 03 Years </b>
 Duration: 02 Years</b>
 <br>
 <ul>Clear Passed in 12th (Physics, Chemistry, Maths) </ul>
-<ul>Clear Passed Two years ITI  </ul></li>
+<ul>Or</ul>
+<ul>Clear Passed Two years ITI.  </ul></li>
 <br>
                                     </p>
                                 </div>

@@ -157,7 +157,7 @@
                         <a href="">Diploma in Civil Engineering</a>
                     </header>
                     <div class="additional-info">
-                        <a>1 Year</a>
+                        <a></a>
                     </div>
                     <div class="description">
                     </div>
@@ -175,7 +175,7 @@
                         <a href="">Diploma in Electrical Engineering</a>
                     </header>
                     <div class="additional-info">
-                        <a>1 Year</a>
+                        <a></a>
                     </div>
                     <div class="description">
                     </div>
@@ -193,7 +193,7 @@
                         <a href="">Diploma in Mechanical Engineering</a>
                     </header>
                     <div class="additional-info">
-                        <a>1 Year</a>
+                        <a></a>
                     </div>
                     <div class="description">
                     </div>

@@ -40,6 +40,8 @@
                         <address>
                             <strong>Sri Sai Institute of Technology</strong>
                             <br>
+                            (College Code 131)
+                            <br>
                             <span>Udham Singh Nagar, </span>
                             <br>
                             <span>Mahua Dabra, Jaspur</span>
@@ -47,9 +49,9 @@
                             <span>Uttarakhand (India)</span>
                             <br>
                             <br>
-                            <p><abbr title="Telephone">Telephone:</abbr> +91 8445385546</p>
+                            <p>Mobile: +91 8449470500 (M)</p>
                             <br>
-                            <p><abbr title="Email">Email:</abbr> <a href="#">info@srisaiiot.com</a></p>
+                            <p>Email: <a href="mailto:info@srisaiiot.com">info@srisaiiot.com</a></p>
                         </address>
                     </aside>
                 </div><!-- /.col-md-3 -->

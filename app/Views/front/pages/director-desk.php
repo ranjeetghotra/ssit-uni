@@ -17,7 +17,7 @@
                         <header>
                             <h2>Director Desk's</h2>
                         </header>
-                        <img src="/assets/img/ssit/Akash Saxsena SSIT.jpg" alt="Akash Saxsena" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
+                        <img src="/assets/img/ssit/Akash Saxsena SSIT.jpg" alt="Principal" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
                         <p class="text-justify"><b>Prof. A.Saxena </b>
                         <br>
                         <br>B.Tech(CSE), M.Tech (IT),Ph.D(P/CSE),LMISTE,LMITT, Google Certified in Digital Marketing.

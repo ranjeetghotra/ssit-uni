@@ -22,14 +22,18 @@
                                 <?=$prow['page_title']?>
                             </h1>
                         </header>
-                        <?php
+                        <div class="page-slick-carousel">
+                                <?php
                         $images = json_decode($prow['page_image']);
                         foreach ($images as $img) {
                         ?>
-                            <img class="img-responsive" src="/images/page/full/<?=$img?>">
+                            <div>
+                            <img class="img-thumbnail" src="/images/page/full/<?=$img?>">
+                            </div>
                         <?php
                         }
                         ?>
+                        </div>
                         <?=$prow['page_content']?>
                     </section>
                 </div><!-- /#page-main -->

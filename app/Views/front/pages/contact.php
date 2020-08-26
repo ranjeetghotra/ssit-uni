@@ -25,9 +25,11 @@
                                     <span>Uttarakhand (India)</span>
                                     <br>
                                     <br>
-                                    <abbr title="Telephone">Telephone:</abbr> 05947-222088 (O), +918449470500 (M)
+                                    <title="Telephone">Telephone: 05947-222088 (O)
                                     <br>
-                                    <abbr title="Email">Email:</abbr> <a href="mailto:info@srisaiiot.com">info@srisaiiot.com</a> <a href="mailto:ssijaspur@gmail.com">ssijaspur@gmail.com</a>
+                                    <title="Mobile">Mobile: +918449470500 (M)
+                                    <br>
+                                    <title="Email">Email: <a href="mailto:info@srisaiiot.com">info@srisaiiot.com</a> <a href="mailto:ssijaspur@gmail.com">ssijaspur@gmail.com</a>
                                 </address>
                                 <div class="icons">
                                     <a href=""><i class="fa fa-twitter"></i></a>

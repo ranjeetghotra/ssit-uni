@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <link rel="stylesheet" href="/assets/css/vanillabox/vanillabox.css" type="text/css">
     <link rel="icon" type="image/png" href="/images/logo/favicon.ico" sizes="32x32" />
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
@@ -22,6 +24,13 @@
         .breadcrumb {
             margin-bottom: 2rem;
         }
+        #page-content .img-thumbnail  {
+            max-height: 400px
+        }
+                .slick-prev:before,
+.slick-next:before {
+    color:gray; 
+}
     </style>
 
 </head>
@@ -49,6 +58,7 @@
     <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/selectize.min.js"></script>
     <script type="text/javascript" src="/assets/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.placeholder.js"></script>
     <script type="text/javascript" src="/assets/js/jQuery.equalHeights.js"></script>
@@ -59,6 +69,19 @@
     <script type="text/javascript" src="/assets/js/custom.js"></script>
     <script src="/assets/js/ajax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+    <script>
+        $('.page-slick-carousel').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            dots: true,
+            adaptiveHeight: true,
+        });
+    </script>
 
 </body>
 

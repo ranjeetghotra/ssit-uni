@@ -25,7 +25,7 @@
                             <h2>Our Mission</h2>
                         </header>
                         <p>
-                            <li>Inspire students to become excellent human beings and dedicate themselves to the service of the nation.</li></p>
+                            <li>Inspire students to become a excellent human beings and dedicate themselves to the service of the nation.</li></p>
                         <p>
                             <li>To promote high quality education in professional studies.</li></p>
                         <br>

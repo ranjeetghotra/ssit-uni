@@ -23,8 +23,20 @@
                                 </header>
                             </section><!-- /#course-header -->
 
-                            <section id="course-info">
-                            <img src="/assets/img/course/civil-enginerring.JPG" alt="Chairman" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
+                            <div class="page-slick-carousel">
+                            <div>
+                                <img class="img-thumbnail" src="/images/civilengn/1.JPG">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/civilengn/2.JPG">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/civilengn/3.JPG">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/civilengn/4.JPG">
+                            </div>
+                            </div>
                                 <header>
                                     <h2>Course Brief</h2>
                                 </header>

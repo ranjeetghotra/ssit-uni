@@ -23,9 +23,15 @@
                                 </header>
                             </section><!-- /#course-header -->
 
-                            <section id="course-info">
-                            <img src="/assets/img/course/electrical-engg.jpg" alt="Chairman" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
-                                <header>
+                            <div class="page-slick-carousel">
+                            <div>
+                                <img class="img-thumbnail" src="/images/electricengn/1.jpg">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/electricengn/2.jpg ">
+                            </div>
+                            </div>
+                        <header>
                                     <h2>Course Brief</h2>
                                 </header>
                                 <div class="block" style="width: 100%; text-align: justify">

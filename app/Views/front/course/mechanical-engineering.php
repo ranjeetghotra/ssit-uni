@@ -24,8 +24,18 @@
                             </section><!-- /#course-header -->
 
                             <section id="course-info">
-                            <img src="/assets/img/course/mechanical-enginerring2.JPG" alt="Chairman" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
-                                <header>
+                            <div class="page-slick-carousel">
+                            <div>
+                                <img class="img-thumbnail" src="/images/mechanicalengn/1.JPG">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/mechanicalengn/2.JPG">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/mechanicalengn/3.JPG">
+                            </div>
+                            </div>
+                            <header>
                                     <h2>Course Brief</h2>
                                 </header>
                                 <div class="block" style="width: 100%; text-align: justify">

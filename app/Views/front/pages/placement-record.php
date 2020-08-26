@@ -17,8 +17,19 @@
                         <header>
                             <h2>Placement @ SSIT</h2>
                         </header>
-                        <img src="/assets/img/other/placement.png" alt="Chairman" class="img-thumbnail" style="margin-top: 0.25rem; margin-bottom: 1rem;">
-                        <p class="text-justify">
+                        <section id="course-info">
+                                <div class="page-slick-carousel">
+                            <div>
+                                <img class="img-thumbnail" src="/images/placement/1.JPG">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/placement/2.JPG">
+                            </div>
+                            <div>
+                                <img class="img-thumbnail" src="/images/placement/3.JPG">
+                            </div>
+                            </div>
+                            <p class="text-justify">
                             Our careers and employability service, academic colleagues and employers work together to ensure you leave the SSIT fully prepared for the world of work. We are consistently leading the best performing modern institutions in the state, where students acquire skills that make them consistently strong among the most employable graduates.Ninety per cent of passing out students opt for various positions in industries such as Engineering, Manufacturing, Quality Control, Production etc.
                         </p>
                         <p class="text-justify">

@@ -29,7 +29,7 @@ $images = $db->table('press')->orderBy('press_id', 'desc')->get()->getResult('ar
                         </header>
                         <div class="row">
                             <div class="col-12" style="text-align: center;">
-                                <?php foreach ($images as $image) : ?><div style="margin-top: 15px ;padding: 15px; border: 1px solid #dee2e6!important;"><img class="img-responsive" src="/images/press/full/<?= $image['press_name'] ?>" alt=""></div><?php endforeach ?>
+                                <?php foreach ($images as $image) : ?><div style="margin-top: 15px ;padding: 15px; border: 1px solid #dee2e6!important;"><img class="img-thumbnail" src="/images/press/full/<?= $image['press_name'] ?>" alt=""></div><?php endforeach ?>
                             </div>
                         </div>
                     </section>
